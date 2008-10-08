@@ -1,0 +1,23 @@
+application: cienciascognitivas
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /style
+  static_dir: Style
+
+- url: /script
+  static_dir: scripts
+
+- url: /games.*
+  script: games.py
+
+- url: /memoria.*
+  script: memoria.py
+  
+- url: /resultados
+  script: resultados.py
+
+- url: /.*
+  script: main.py

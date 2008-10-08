@@ -1,0 +1,17 @@
+-> Crear guía de estilo
+-> Aplicar guía de estilo en un CSS
+-> Crear páginas en HTML
+    -> Pagina de entrada (index.html)
+    -> Menú principal (main_menu.html)
+    -> Menú de actividades de entretenimiento (juegos.html)
+    -> Formato de memorama (memorama.html), sudoku(sudoku.html), y crucigrama(crucigrama.html)
+    -> Pagina de cambio de información del usuario (userInfo.html)
+    -> Pagina de mensajes (de error o de información) (mensaje.html)
+    -> Pagina de inicio de actividades de memoria (escoger juego y mostrar figuras)(inicio.html)
+    -> Pagina de fin de actividades de memoria (hacer preguntas finales, y mostrar resultados)(fin.html)
+    -> Pagina de avances y estadística del usuario (marcador.html)
+-> Crear juego de crucigrama en javascript
+-> Hacer módulo que calcule estadísticas del usuario
+-> Hacer módulo que pregunte a los usuarios a mitad del juego (EN PROCESO)
+-> Hacer javascript de escoger juego y mostrar figuras??
+-> Hacer javascript de preguntas finales y mostrar resultados

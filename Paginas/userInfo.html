@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Informacion de usuario</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="Salvador Gonzalez">
+	<!-- Date: 2008-10-03 -->
+</head>
+<body>
+	{{ mensaje }}<br>
+	<form method="post" name="form" action="{{ submit_url }}">
+		Nombre: <input type="text" value="{{ nombre }}" name="nombre"><br>
+		Edad: <input type="text" value="{{ edad }}" name="edad"><br>
+		<input type="submit" value="Submit"><br>
+	</form>
+	<a href="{{ return_url }}">Return</a>
+</body>
+</html>
