@@ -18,6 +18,7 @@ handlers:
   
 - url: /resultados
   script: resultados.py
+  # TODO: Falta hacer la pagina de resultados
 
 - url: /.*
   script: main.py
