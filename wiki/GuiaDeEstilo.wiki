@@ -4,8 +4,10 @@
 
 = Introduction =
 
-La idea general del diseño. Cómo le estamos haciendo para que sea accesible a las personas mayores (ej. font más grande) y por qué [recuerda poner citas] Esto lo vamos a necesitar para poner en la entrega final.
+La idea general del diseño. 
 
+= Consideraciones generales =
+Describe el look general de las páginas. Cómo le estamos haciendo para que sea accesible a las personas mayores (ej. font más grande) y por qué [recuerda poner citas] Esto lo vamos a necesitar para poner en la entrega final.
 
 = Elementos de la página =
 === Texto ===
@@ -23,4 +25,20 @@ La idea general del diseño. Cómo le estamos haciendo para que sea accesible a 
  * Font de los botones, color de font, etc.
  * Forma de los botones
 
-=== ===
+=== Diseño del banner ===
+ * Colores
+ * Font
+ * Imagenes?
+ * Tamaño del banner (100% del ancho? Cuánto de altura?)
+
+=== Diseño de los recuadros de actividad ===
+Cómo se ven los cuadros en los que van los juegos (sudoku, crucigrama)
+ * Lleva marco? de qué color?
+ * Centrado?
+ * Cómo va posisionado?
+
+=== Diseño de las preguntas de memoria ===
+El formato de los recuadros que se aparecen a mitad del juego para hacer una pregunta
+ * Tamaño
+ * Posicionamiento
+ * El font del texto de las preguntas
