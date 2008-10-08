@@ -6,6 +6,9 @@ api_version: 1
 handlers:
 - url: /style
   static_dir: Style
+  
+- url: /imagenes
+  static_dir: imagenes
 
 - url: /script
   static_dir: scripts
