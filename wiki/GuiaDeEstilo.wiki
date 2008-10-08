@@ -1,6 +1,6 @@
 #summary Guía de estilo del sistema.
 
-=Rodolfo, por favor pon aquí la VERSIÓN FINAL ENTREGABLE de la guía de estilo sobre la que estás trabajando=
+=OMG=
 
 = Introduction =
 
