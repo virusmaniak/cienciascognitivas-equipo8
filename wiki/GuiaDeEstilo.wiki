@@ -7,7 +7,7 @@
 La idea general del diseño. 
 
 = Consideraciones generales =
-Describe el look general de las páginas. Cómo le estamos haciendo para que sea accesible a las personas mayores (ej. font más grande) y por qué [recuerda poner citas] Esto lo vamos a necesitar para poner en la entrega final.
+Describe el look general de las páginas. Cómo le estamos haciendo para que sea accesible a las personas mayores (ej. font más grande) y por qué (recuerda poner citas) Esto lo vamos a necesitar para poner en la entrega final.
 
 = Elementos de la página =
 === Texto ===
