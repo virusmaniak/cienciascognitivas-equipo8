@@ -1,10 +1,10 @@
 #summary Guía de estilo del sistema.
 
-=Rodolfo, por favor pon aquí la guía de estilo sobre la que estás trabajando=
+=Rodolfo, por favor pon aquí la VERSIÓN FINAL ENTREGABLE de la guía de estilo sobre la que estás trabajando=
 
 = Introduction =
 
-La idea general del diseño. Cómo le estamos haciendo para que sea accesible a las personas mayores (ej. font más grande) y por qué. Esto lo vamos a necesitar para poner en la entrega final.
+La idea general del diseño. Cómo le estamos haciendo para que sea accesible a las personas mayores (ej. font más grande) y por qué [recuerda poner citas] Esto lo vamos a necesitar para poner en la entrega final.
 
 
 = Elementos de la página =
