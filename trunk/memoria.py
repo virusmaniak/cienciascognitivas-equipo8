@@ -16,6 +16,8 @@ from google.appengine.ext import webapp
 from google.appengine.ext import db
 from userModel import registroDeUsuario
 
+# TODO: Clase que reciba los scores del usuario y los guarde en la base de datos
+
 class Menu(webapp.RequestHandler):
     def get(self):
         user = users.get_current_user()
@@ -36,6 +38,7 @@ class Menu(webapp.RequestHandler):
         self.response.out.write(template.render(path, template_values))
         
 class Start(webapp.RequestHandler):
+    # TODO: Hacer pagina que muestre al usuario algunas figuras y deje escoger un juego
     def get(self):
         user = users.get_current_user()
         if not user:
@@ -55,6 +58,7 @@ class Start(webapp.RequestHandler):
         self.response.out.write(template.render(path, template_values))
 
 class End(webapp.RequestHandler):
+    # TODO: Hacer pagina que haga preguntas finales, y muestre resultados
     def get(self):
         user = users.get_current_user()
         if not user:

@@ -7,6 +7,8 @@ Created by Salvador Gonzalez on 2008-10-06.
 Copyright (c) 2008 __MyCompanyName__. All rights reserved.
 """
 
+# TODO: Juego crucigrama
+
 import wsgiref.handlers
 import os
 

@@ -4,7 +4,7 @@
 import wsgiref.handlers
 
 from google.appengine.ext import db
-
+# TODO: Validar el formato de la base de datos, el registro de Actividad
 
 class registroDeUsuario(db.Model):
     usuario = db.UserProperty()
