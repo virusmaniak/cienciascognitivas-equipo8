@@ -4,12 +4,23 @@
 
 = Introduction =
 
-Add your content here.
+La idea general del diseño. Cómo le estamos haciendo para que sea accesible a las personas mayores (ej. font más grande) y por qué. Esto lo vamos a necesitar para poner en la entrega final.
 
 
-= Details =
+= Elementos de la página =
+=== Texto ===
+ * Font a utilizar:
+ * Tamaño:
+ * Color: 
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+=== Links ===
+ * Color de los links
+ * Formato (subrayado o no, etc)
+
+=== Botones ===
+ * Color de los botones en su estado normal
+ * Color de los botones presionados
+ * Font de los botones, color de font, etc.
+ * Forma de los botones
+
+=== ===
