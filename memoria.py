@@ -99,6 +99,8 @@ class Juegos(webapp.RequestHandler):
         
         if self.request.uri.endswith("memorama"):
             template_url = 'Paginas/memorama.html'
+        if self.request.uri.endswith("crucigrama"):
+            template_url = 'Paginas/crucigrama.html'
         if self.request.uri.endswith("sudoku"):
             template_url = 'Paginas/sudoku.html'
         
