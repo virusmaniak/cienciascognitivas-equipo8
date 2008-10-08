@@ -17,3 +17,4 @@ class registroDeActividad(db.Model):
     aciertos = db.IntegerProperty(required=True, default=0)
     preguntas = db.IntegerProperty(required=True, default=0)
     
+    
