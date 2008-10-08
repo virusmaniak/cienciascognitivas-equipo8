@@ -15,9 +15,6 @@
 # limitations under the License.
 #
 
-
-
-
 import wsgiref.handlers
 import os
 
