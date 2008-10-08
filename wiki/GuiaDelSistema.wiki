@@ -22,3 +22,10 @@ Este módulo tiene las clases que representan las tablas en la base de datos
 
 == Scripts ==
 Cada juego tiene sus propios scripts. La única excepción es el script 'preguntas.js' donde existe el script que va desplegado preguntas a los usuarios. Además del script 'jquery.js' que se usa como soporte para codificar.
+
+== Direcciones HTML ==
+Dado a que el programa en python procesa todas las peticiones utilizando el sistema de módulos, las direcciones de los directorios del proyecto no son un match directo con las direcciones que el programa aparenta tener en el navegador. La estructura de los directorios desde HTML tiene la siguiente forma:
+ * /style/   <- En este directorio están todas las hojas CSS que están en la carpeta 'Style' del directorio del código.
+ * /script/ <- En este directorio están todos los javascripts que están en la carpeta 'scripts' del directorio del código.
+ * /games/ <- En este directorio están las páginas generadas por el módulo 'games.py'
+ * /memoria/ <- En este directorio están las páginas generadas por el módulo 'memoria.py'
