@@ -42,3 +42,7 @@ El formato de los recuadros que se aparecen a mitad del juego para hacer una pre
  * Tamaño
  * Posicionamiento
  * El font del texto de las preguntas
+
+=== Diseño de la barra de navegación ===
+Qué tiene la barra de navegación
+Cómo se ve
