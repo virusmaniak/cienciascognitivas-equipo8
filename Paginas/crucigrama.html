@@ -2,17 +2,12 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta name="generator" content=
-"HTML Tidy for Windows (vers 14 February 2006), see www.w3.org" />
-<meta http-equiv="Content-Type" content=
-"text/html; charset=us-ascii" />
-<script type="text/javascript" src="/scripts/jquery.js">
-</script>
-<title>Crucigrama</title>
-
-<script type="text/javascript">
-//<![CDATA[
-        var hacerPreguntas = {{ hacerPreguntas }};
+    <meta name="generator" content="HTML Tidy for Windows (vers 14 February 2006), see www.w3.org" />
+    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+    <title>Crucigrama</title>
+    <script type="text/javascript" src="/scripts/jquery.js"></script>
+    <script type="text/javascript">
+        var hacerPreguntas = true;
         var img1 = "square";
         var img2 = "circle";
         var img3 = "star";
@@ -20,188 +15,189 @@
         var color2 = "red";
         var color3 = "blue";
         var preguntasTotales = 3;
-//]]>
-</script>
-<script type="text/javascript" src="/scripts/preguntas.js">
-</script>
-<script language="JavaScript" type="text/javascript">
-  var width;
-    var height;
-    var numAcross;
-    var numDown;
-    var wrongMessage='La respuesta es incorrecta, por favor intenta de nuevo';
-    var doneAction;
-    var sourceDir="/imagenes/";
-	var puzzleLayout;
-	var puzzleData;
-    function cargarJuego(i) {
-        if(i==1){
-        var width=8;
-    height=9;
-    numAcross=4;
-    numDown=4;
-    wrongMessage='La respuesta es incorrecta, por favor intenta de nuevo';
-    doneAction='';
-    sourceDir="/imagenes/"; //TODO: validar que se carguen las imagenes, según la jerarquía.
+    </script>
+    <script type="text/javascript" src="/scripts/preguntas.js"></script>
+    <script language="JavaScript" type="text/javascript">
+        var width;
+        var height;
+        var numAcross;
+        var numDown;
+        var wrongMessage='La respuesta es incorrecta, por favor intenta de nuevo';
+        var doneAction;
+        var sourceDir="/imagenes/";
+        var puzzleLayout;
+        var puzzleData;
+        function cargarJuego(i) {
+            if(i==1){
+                var width=8;
+                height=9;
+                numAcross=4;
+                numDown=4;
+                wrongMessage='La respuesta es incorrecta, por favor intenta de nuevo';
+                doneAction='';
+                sourceDir="/imagenes/"; //TODO: validar que se carguen las imagenes, según la jerarquía.
 
-    puzzleLayout = new Array(
-    '1ba','4ds','u','n','c','i','o','n',
-    'r','e','-','-','-','-','-','-',
-    'g','u','-','2bp','e','k','3di','n',
-    'e','l','-','a','-','-','t','-',
-    'n','-','-','r','-','-','a','-',
-    '3at','o','k','i','o','-','l','-',
-    'i','-','-','s','-','-','i','-',
-    'n','-','-','-','-','-','a','-',
-    '4aa','l','e','m','a','n','i','a'
-    );
+                puzzleLayout = new Array(
+                    '1ba','4ds','u','n','c','i','o','n',
+                    'r','e','-','-','-','-','-','-',
+                    'g','u','-','2bp','e','k','3di','n',
+                    'e','l','-','a','-','-','t','-',
+                    'n','-','-','r','-','-','a','-',
+                    '3at','o','k','i','o','-','l','-',
+                    'i','-','-','s','-','-','i','-',
+                    'n','-','-','-','-','-','a','-',
+                    '4aa','l','e','m','a','n','i','a'
+                );
 
-    puzzleData = new Array(
-    "1A","Capital de Paraguay","asuncion",
-    "2A","Capital de China","pekin",
-    "3A","Capital de Japón","tokio",
-    "4A","País cuya capital es Berlín","alemania",
-    "1D","País cuya capital es Buenos Aires","argentina",
-    "2D","Capital de Francia","paris",
-    "3D","País cuya capital es Roma","italia",
-    "4D","Capital de Korea del Sur","seul"
-    );}
-	
-        if(i==2){
-    width=16;
-    height=16;
-    numAcross=6;
-    numDown=6;
-    wrongMessage='La respuesta es incorrecta, por favor intenta de nuevo';
-    doneAction='';
-    sourceDir='/imagenes/'; //TODO: validar que se carguen las imagenes, según la jerarquía.
+                puzzleData = new Array(
+                    "1A","Capital de Paraguay","asuncion",
+                    "2A","Capital de China","pekin",
+                    "3A","Capital de Japón","tokio",
+                    "4A","País cuya capital es Berlín","alemania",
+                    "1D","País cuya capital es Buenos Aires","argentina",
+                    "2D","Capital de Francia","paris",
+                    "3D","País cuya capital es Roma","italia",
+                    "4D","Capital de Korea del Sur","seul"
+                );
+            }
+            if(i==2){
+                width=16;
+                height=16;
+                numAcross=6;
+                numDown=6;
+                wrongMessage='La respuesta es incorrecta, por favor intenta de nuevo';
+                doneAction='';
+                sourceDir='/imagenes/'; //TODO: validar que se carguen las imagenes, según la jerarquía.
 
-    puzzleLayout = new Array(
-    '-','-','-','1ac','5da','r','t','o','g','3dr','a','f','i','a','-','-',
-    '-','-','-','-','s','-','-','-','-','i','-','-','-','-','-','-',
-    '-','-','2av','e','n','u','s','-','-','m','-','-','-','-','-','-',
-    '1df','-','-','-','o','-','-','-','-','a','-','-','-','-','-','-',
-    'o','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-',
-    's','-','-','-','-','-','-','-','-','-','2dt','-','-','-','-','4dl',
-    '6af','e','o','-','-','-','-','-','3ag','e','o','l','o','g','i','a',
-    'o','-','-','-','-','-','6dn','-','-','-','l','-','-','-','-','p',
-    'r','-','-','-','-','-','e','-','-','-','k','-','-','-','-','i',
-    'o','-','-','-','-','-','o','-','-','-','i','-','-','-','-','z',
-    's','-','-','-','-','5aa','l','f','a','r','e','r','o','-','-','-',
-    '-','-','-','-','-','-','i','-','-','-','n','-','-','-','-','-',
-    '-','-','-','-','-','-','t','-','-','-','-','-','-','-','-','-',
-    '-','-','-','-','-','-','i','-','-','-','-','-','-','-','-','-',
-    '-','-','-','-','-','-','c','-','-','-','-','-','-','-','-','-',
-    '-','-','4ap','e','r','r','o','-','-','-','-','-','-','-','-','-'
-    );
+                puzzleLayout = new Array(
+                    '-','-','-','1ac','5da','r','t','o','g','3dr','a','f','i','a','-','-',
+                    '-','-','-','-','s','-','-','-','-','i','-','-','-','-','-','-',
+                    '-','-','2av','e','n','u','s','-','-','m','-','-','-','-','-','-',
+                    '1df','-','-','-','o','-','-','-','-','a','-','-','-','-','-','-',
+                    'o','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-',
+                    's','-','-','-','-','-','-','-','-','-','2dt','-','-','-','-','4dl',
+                    '6af','e','o','-','-','-','-','-','3ag','e','o','l','o','g','i','a',
+                    'o','-','-','-','-','-','6dn','-','-','-','l','-','-','-','-','p',
+                    'r','-','-','-','-','-','e','-','-','-','k','-','-','-','-','i',
+                    'o','-','-','-','-','-','o','-','-','-','i','-','-','-','-','z',
+                    's','-','-','-','-','5aa','l','f','a','r','e','r','o','-','-','-',
+                    '-','-','-','-','-','-','i','-','-','-','n','-','-','-','-','-',
+                    '-','-','-','-','-','-','t','-','-','-','-','-','-','-','-','-',
+                    '-','-','-','-','-','-','i','-','-','-','-','-','-','-','-','-',
+                    '-','-','-','-','-','-','c','-','-','-','-','-','-','-','-','-',
+                    '-','-','4ap','e','r','r','o','-','-','-','-','-','-','-','-','-'
+                );
 
-    puzzleData = new Array(
-    "1A","Ciencia que se dedica a crear mapas","cartografia",
-    "2A","Diosa de amor","venus",
-    "3A","Ciencia que estudia la forma inferior del globo terrestre y sus componentes","geologia",
-    "4A","Mamífero domestico","perro",
-    "5A","El que hace objetos con arcilla","alfarero",
-    "6A","Antónimo de bonito","feo",
-    "1D","Utencilio de bolsillo para encender fuego","fosforos",
-    "2D","Escritor del libro El señor de los anillos","tolkien",
-    "3D","Repetición de una secuencia de fonemas","rima",
-    "4D","Varilla de grafito y arcilla cubierta con madera","lapiz",
-    "5D","Animal de carga próximo al caballo","asno",
-    "6D","Nueva edad de la piedra periodo","neolitico"
-    );
-    }
-        if(i==3){
-	width=16;
-    height=16;
-    numAcross=10;
-    numDown=8;
-    wrongMessage='La respuesta es incorrecta, por favor intenta de nuevo';
-    doneAction='';
-    sourceDir='/imagenes/';
+                puzzleData = new Array(
+                    "1A","Ciencia que se dedica a crear mapas","cartografia",
+                    "2A","Diosa de amor","venus",
+                    "3A","Ciencia que estudia la forma inferior del globo terrestre y sus componentes","geologia",
+                    "4A","Mamífero domestico","perro",
+                    "5A","El que hace objetos con arcilla","alfarero",
+                    "6A","Antónimo de bonito","feo",
+                    "1D","Utencilio de bolsillo para encender fuego","fosforos",
+                    "2D","Escritor del libro El señor de los anillos","tolkien",
+                    "3D","Repetición de una secuencia de fonemas","rima",
+                    "4D","Varilla de grafito y arcilla cubierta con madera","lapiz",
+                    "5D","Animal de carga próximo al caballo","asno",
+                    "6D","Nueva edad de la piedra periodo","neolitico"
+                );
+            }
+            if(i==3){
+                width=16;
+                height=16;
+                numAcross=10;
+                numDown=8;
+                wrongMessage='La respuesta es incorrecta, por favor intenta de nuevo';
+                doneAction='';
+                sourceDir='/imagenes/';
 
-    puzzleLayout = new Array(
-    '1ba','n','g','3du','i','4dl','a','-','2bt','a','m','e','s','i','s','-',
-    'g','-','-','r','-','u','-','-','e','-','-','-','-','-','-','-',
-    'u','-','-','a','-','a','-','3aa','l','b','a','t','r','o','s','-',
-    'i','-','-','n','-','4an','o','-','e','-','-','-','-','-','-','-',
-    'l','-','-','o','-','d','-','5aa','s','i','a','-','-','-','-','-',
-    'a','-','-','-','6ar','a','p','-','c','-','-','-','-','-','-','-',
-    '-','-','-','-','-','-','-','-','7ao','r','o','-','-','-','-','6da',
-    '-','-','-','-','-','-','-','-','p','-','-','-','-','-','-','d',
-    '-','-','-','-','-','-','5dm','-','i','-','-','-','-','-','-','y',
-    '-','-','-','-','-','8ab','a','r','o','n','-','-','-','-','-','a',
-    '-','-','-','-','-','-','d','-','-','-','-','-','-','-','-','c',
-    '-','-','-','9ap','e','t','r','o','g','l','i','8df','o','7ds','-','e',
-    '-','-','-','-','-','-','i','-','-','-','-','a','-','a','-','n',
-    '-','-','-','-','-','-','10ad','a','v','i','d','-','-','l','-','t',
-    '-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','e',
-    '-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','s'
-    );
+                puzzleLayout = new Array(
+                    '1ba','n','g','3du','i','4dl','a','-','2bt','a','m','e','s','i','s','-',
+                    'g','-','-','r','-','u','-','-','e','-','-','-','-','-','-','-',
+                    'u','-','-','a','-','a','-','3aa','l','b','a','t','r','o','s','-',
+                    'i','-','-','n','-','4an','o','-','e','-','-','-','-','-','-','-',
+                    'l','-','-','o','-','d','-','5aa','s','i','a','-','-','-','-','-',
+                    'a','-','-','-','6ar','a','p','-','c','-','-','-','-','-','-','-',
+                    '-','-','-','-','-','-','-','-','7ao','r','o','-','-','-','-','6da',
+                    '-','-','-','-','-','-','-','-','p','-','-','-','-','-','-','d',
+                    '-','-','-','-','-','-','5dm','-','i','-','-','-','-','-','-','y',
+                    '-','-','-','-','-','8ab','a','r','o','n','-','-','-','-','-','a',
+                    '-','-','-','-','-','-','d','-','-','-','-','-','-','-','-','c',
+                    '-','-','-','9ap','e','t','r','o','g','l','i','8df','o','7ds','-','e',
+                    '-','-','-','-','-','-','i','-','-','-','-','a','-','a','-','n',
+                    '-','-','-','-','-','-','10ad','a','v','i','d','-','-','l','-','t',
+                    '-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','e',
+                    '-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','s'
+                );
 
-    puzzleData = new Array(
-    "1A","Pez que mide hasta 1 metro de longitud que vive en agua dulce","anguila",
-    "2A","Río de Inglaterra que conecta Londres con el mar","tamesis",
-    "3A","Ave de los mares muy voraz color blanca","albatros",
-    "4A","Negación.","no",
-    "5A","Continente mas grande del mundo","asia",
-    "6A","Elemento musical de la cultura hip hop","rap",
-    "7A","Metal precioso.","oro",
-    "8A","Título de nobleza","baron",
-    "9A","Representaciones gráficas grabadas en rocas o piedras","petroglifos",
-    "10A","Hijo de Isaí cuyo corazón era conforme a Jehová","david",
-    "1D","Ave rapaz de gran tamaño y excelente vista","aguila",
-    "3D","Séptimo planeta del sistema solar","urano",
-    "4D","Capital de angola","luanda",
-    "2D","Instrumento para ver objetos lejanos.","telescopio",
-    "5D","Capital de españa","madrid",
-    "6D","Ángulos consecutivos y su suma es de 180º","adyacentes",
-    "7D","NaCl","sal",
-    "8D","Cuarta nota musical","fa"
-    );
-    }
-  
+                puzzleData = new Array(
+                    "1A","Pez que mide hasta 1 metro de longitud que vive en agua dulce","anguila",
+                    "2A","Río de Inglaterra que conecta Londres con el mar","tamesis",
+                    "3A","Ave de los mares muy voraz color blanca","albatros",
+                    "4A","Negación.","no",
+                    "5A","Continente mas grande del mundo","asia",
+                    "6A","Elemento musical de la cultura hip hop","rap",
+                    "7A","Metal precioso.","oro",
+                    "8A","Título de nobleza","baron",
+                    "9A","Representaciones gráficas grabadas en rocas o piedras","petroglifos",
+                    "10A","Hijo de Isaí cuyo corazón era conforme a Jehová","david",
+                    "1D","Ave rapaz de gran tamaño y excelente vista","aguila",
+                    "3D","Séptimo planeta del sistema solar","urano",
+                    "4D","Capital de angola","luanda",
+                    "2D","Instrumento para ver objetos lejanos.","telescopio",
+                    "5D","Capital de españa","madrid",
+                    "6D","Ángulos consecutivos y su suma es de 180º","adyacentes",
+                    "7D","NaCl","sal",
+                    "8D","Cuarta nota musical","fa"
+                );
+            }
 
-    if ( hacerPreguntas ){
-        startPreguntas();
-    }
-    $("#crucigrama").html("");
-    $("#crucigrama").css("visibility", "visible")
-                  .css("position", "absolute")
-                  .css("border-style", "solid")
-                  .css("border-width", "3px");
-    
-    $("#bienvenida").css("visibility", "hidden");
-    
-  drawCrossword();
-  $("#crucigrama").append("<BR>");
-  drawAcross();
-  $("#crucigrama").append("<BR>");
-  drawDown();
-	}
-$(document).ready(function(){
- $("#crucigrama").css("visibility", "hidden");
-    $("#finishScreen").css("visibility", "hidden");
-    $("#bienvenida").css("position", "absolute")
-                    .css("width", "300px")
-                    .css("height", "200px")
-                    .css("border-style", "solid")
-                    .css("border-width", "1px");
-                    
-    $("#facil").click( function(){
-        cargarJuego(1);
-    } );
-    $("#medio").click( function(){
-		cargarJuego(2);
-    } );
-    $("#dificil").click( function(){
-        cargarJuego(3);
-    } );
-});
-</script>
-<SCRIPT language="JavaScript" SRC="/scripts/crossword.js"></SCRIPT>
+            if ( hacerPreguntas ){
+                startPreguntas();
+            }
+            $("#crucigrama").html("");
+            $("#crucigrama").css("visibility", "visible")
+                            .css("position", "absolute")
+                            .css("border-style", "solid")
+                            .css("border-width", "3px");
+
+            $("#bienvenida").css("visibility", "hidden");
+            solvedData = new fillArray(height*width, false);
+            types = new getPuzzleData(0);
+            clues = new getPuzzleData(1);
+            words = new getPuzzleData(2);
+            loadSources();
+            drawCrossword();
+            $("#crucigrama").append("<BR>");
+            drawAcross();
+            $("#crucigrama").append("<BR>");
+            drawDown();
+        }
+        $(document).ready(function(){
+            $("#crucigrama").css("visibility", "hidden");
+            $("#finishScreen").css("visibility", "hidden");
+            $("#bienvenida").css("position", "absolute")
+            .css("width", "300px")
+            .css("height", "200px")
+            .css("border-style", "solid")
+            .css("border-width", "1px");
+
+            $("#facil").click( function(){
+                cargarJuego(1);
+            } );
+            $("#medio").click( function(){
+                cargarJuego(2);
+            } );
+            $("#dificil").click( function(){
+                cargarJuego(3);
+            } );
+        });
+    </script>
+    <script language="JavaScript" SRC="/scripts/crossword.js"></script>
 </head>
 <body>
-	<div id="crucigrama"></div>
+    <div id="crucigrama"></div>
     <div id="bienvenida">
         Nivel:<br>
         <input type="submit" id="facil" value="facil"></input><br>
