@@ -5,7 +5,7 @@ api_version: 1
 
 handlers:
 - url: /style
-  static_dir: style
+  static_dir: Style
   
 - url: /imagenes
   static_dir: imagenes
