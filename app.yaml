@@ -5,12 +5,12 @@ api_version: 1
 
 handlers:
 - url: /style
-  static_dir: Style
+  static_dir: style
   
 - url: /imagenes
   static_dir: imagenes
 
-- url: /script
+- url: /scripts
   static_dir: scripts
 
 - url: /games.*
