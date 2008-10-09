@@ -5,9 +5,33 @@
     <meta name="generator" content="HTML Tidy for Windows (vers 14 February 2006), see www.w3.org" />
     <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
     <title>Crucigrama</title>
+    <style type="text/css">
+        .heading {
+          font-family: Verdana, Geneva, Arial, sans-serif;
+          font-size: 12pt;
+          color: #990033;
+        }
+
+        .clues {
+          font-family: Verdana, Geneva, Arial, sans-serif;
+          font-size: 10pt;
+          text-align: left;
+          text-decoration: none;
+          color: black;
+        }
+        .clues:hover {
+          font-family: Verdana, Geneva, Arial, sans-serif;
+          font-size: 10pt;
+          text-align: left;
+          text-decoration: none;
+          color: #00008B;
+          font-weight: bold;
+
+        }
+    </style>
     <script type="text/javascript" src="/scripts/jquery.js"></script>
     <script type="text/javascript">
-        var hacerPreguntas = true;
+        var hacerPreguntas = {{ hacerPreguntas }};
         var img1 = "square";
         var img2 = "circle";
         var img3 = "star";
@@ -29,7 +53,7 @@
         var puzzleData;
         function cargarJuego(i) {
             if(i==1){
-                var width=8;
+                width=8;
                 height=9;
                 numAcross=4;
                 numDown=4;
@@ -156,13 +180,7 @@
             if ( hacerPreguntas ){
                 startPreguntas();
             }
-            $("#crucigrama").html("");
-            $("#crucigrama").css("visibility", "visible")
-                            .css("position", "absolute")
-                            .css("border-style", "solid")
-                            .css("border-width", "3px");
 
-            $("#bienvenida").css("visibility", "hidden");
             solvedData = new fillArray(height*width, false);
             types = new getPuzzleData(0);
             clues = new getPuzzleData(1);
@@ -172,7 +190,13 @@
             $("#crucigrama").append("<BR>");
             drawAcross();
             $("#crucigrama").append("<BR>");
-            drawDown();
+            drawDown(); 
+            $("#crucigrama").css("visibility", "visible")
+                            .css("position", "absolute")
+                            .css("border-style", "solid")
+                            .css("border-width", "3px");
+
+            $("#bienvenida").css("visibility", "hidden");
         }
         $(document).ready(function(){
             $("#crucigrama").css("visibility", "hidden");
