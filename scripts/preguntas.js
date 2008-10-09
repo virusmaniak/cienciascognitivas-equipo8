@@ -80,5 +80,5 @@ function mostrarPregunta(){
 }
 
 function startPreguntas(){
-    setTimeout( mostrarPregunta, 1000 );
+    setTimeout( mostrarPregunta, 10000 );
 }

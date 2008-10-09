@@ -59,7 +59,7 @@
                 numDown=4;
                 wrongMessage='La respuesta es incorrecta, por favor intenta de nuevo';
                 doneAction='';
-                sourceDir="/imagenes/"; //TODO: validar que se carguen las imagenes, según la jerarquía.
+                sourceDir="/imagenes/";
 
                 puzzleLayout = new Array(
                     '1ba','4ds','u','n','c','i','o','n',
@@ -91,7 +91,7 @@
                 numDown=6;
                 wrongMessage='La respuesta es incorrecta, por favor intenta de nuevo';
                 doneAction='';
-                sourceDir='/imagenes/'; //TODO: validar que se carguen las imagenes, según la jerarquía.
+                sourceDir='/imagenes/';
 
                 puzzleLayout = new Array(
                     '-','-','-','1ac','5da','r','t','o','g','3dr','a','f','i','a','-','-',
@@ -223,6 +223,8 @@
     <script language="JavaScript" SRC="/scripts/crossword.js"></script>
 </head>
 <body>
+    <h1>Sudoku</h1>
+	{{ nombre }} &nbsp;&nbsp;&nbsp; <a href="{{ return_url }}">Regresar</a><p>
     <div id="crucigrama"></div>
     <div id="bienvenida">
         Nivel:<br>
