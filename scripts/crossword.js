@@ -301,33 +301,35 @@ function drawCrossword()
 
 function drawAcross()
 {
-    $("#crucigrama").append('<span class="heading">Horizontales:</span> <br>');
+    stringC = '<span class="heading">Horizontales:</span> <br>';
 
     for (i = 0; i < numAcross-1; i++)
     {
-        $("#crucigrama").append('<a class="clues" href="javascript:void(clueClick('+i+'))" onMouseOver="mouseOver();" onMouseOut="mouseOut();">');
-        $("#crucigrama").append(types[i].substring(0, types[i].length-1)+'. '+clues[i]+'</a>');
+        stringC += '<a class="clues" href="javascript:void(clueClick('+i+'))" onMouseOver="mouseOver();" onMouseOut="mouseOut();">';
+        stringC += types[i].substring(0, types[i].length-1)+'. '+clues[i]+'</a>';
         if (!isNS4)
-        $("#crucigrama").append('<BR>');
+        stringC += '<BR>';
     }
-    $("#crucigrama").append('<a class="clues" href="javascript:void(clueClick('+i+'))" onMouseOver="mouseOver();" onMouseOut="mouseOut();">');
-    $("#crucigrama").append(types[i].substring(0, types[i].length-1)+'. '+clues[i]+'</a>');
+    stringC += '<a class="clues" href="javascript:void(clueClick('+i+'))" onMouseOver="mouseOver();" onMouseOut="mouseOut();">';
+    stringC += types[i].substring(0, types[i].length-1)+'. '+clues[i]+'</a>';
     if (!isNS4)
-    $("#crucigrama").append('<BR>');
+    stringC += '<BR>';
+    $("#crucigrama").append(stringC);
 }
 
 function drawDown()
 {
-    $("#crucigrama").append('<span class="heading">Verticales:</span> <BR>');
+    stringC = '<span class="heading">Verticales:</span> <BR>';
 
     for (i = numAcross; i < ((numAcross+numDown)-1); i++)
     {
-        $("#crucigrama").append('<a class="clues" href="javascript:void(clueClick('+i+'))" onMouseOver="mouseOver();" onMouseOut="mouseOut();">');
-        $("#crucigrama").append(types[i].substring(0, types[i].length-1)+'. '+clues[i]+'</A>');
+        stringC += '<a class="clues" href="javascript:void(clueClick('+i+'))" onMouseOver="mouseOver();" onMouseOut="mouseOut();">';
+        stringC += types[i].substring(0, types[i].length-1)+'. '+clues[i]+'</A>';
         if (!isNS4)
-        $("#crucigrama").append('<BR>');
+        stringC += '<BR>';
     }
-    $("#crucigrama").append('<a class="clues" href="javascript:void(clueClick('+i+'))" onMouseOver="mouseOver();" onMouseOut="mouseOut();">');
-    $("#crucigrama").append(types[i].substring(0, types[i].length-1)+'. '+clues[i]+'</A>');
-    $("#crucigrama").append(' <BR>');
+    stringC += '<a class="clues" href="javascript:void(clueClick('+i+'))" onMouseOver="mouseOver();" onMouseOut="mouseOut();">';
+    stringC += types[i].substring(0, types[i].length-1)+'. '+clues[i]+'</A>';
+    stringC += ' <BR>';
+    $("#crucigrama").append(stringC);
 }
