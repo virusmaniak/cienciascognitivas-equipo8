@@ -286,12 +286,13 @@ function mouseOut()
 function drawCrossword()
 {
     window.defaultStatus = "";
-    $("#crucigrama").append('<table border="1" cellspacing=0 cellpadding=0 bgcolor="white">');
+    $("#crucigrama").append('<table border="1" cellspacing=0 cellpadding=0 bgcolor="white" id="tableC" border=3>');
     for (i = 0; i < height; i++)
     {
         $("#crucigrama").append('<tr>');
-        for (j = 0; j < width; j++)
-        $("#crucigrama").append('<td background="'+originalSources[i*width+j]+'"><img src="'+originalSources[i*width+j]+'" width=21 height=21 name="box'+(i*width+j)+'"><br></td>');
+        for (j = 0; j < width; j++){
+            $("#crucigrama").append('<td background="'+originalSources[i*width+j]+'"><img src="'+originalSources[i*width+j]+'" width=21 height=21 name="box'+(i*width+j)+'"><br></td>');
+        }
         $("#crucigrama").append('</tr>');
     }
     $("#crucigrama").append("</table>");
