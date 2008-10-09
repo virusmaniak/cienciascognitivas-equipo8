@@ -59,7 +59,7 @@ function formatDivRespuestas(){
                 .css("left", (i*80+20)+"px")
                 .css("border-style", "solid")
                 .css("border-width", "1px")
-                .css("top", "100px")
+                .css("top", "100px");
     }
 }
 
