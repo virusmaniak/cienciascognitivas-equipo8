@@ -286,16 +286,17 @@ function mouseOut()
 function drawCrossword()
 {
     window.defaultStatus = "";
-    $("#crucigrama").append('<table border="1" cellspacing=0 cellpadding=0 bgcolor="white" id="tableC" border=3>');
+    stringC = '<table border="1" cellspacing=0 cellpadding=0 bgcolor="white" id="tableC" border=3>';
     for (i = 0; i < height; i++)
     {
-        $("#crucigrama").append('<tr>');
+        stringC += '<tr>';
         for (j = 0; j < width; j++){
-            $("#crucigrama").append('<td background="'+originalSources[i*width+j]+'"><img src="'+originalSources[i*width+j]+'" width=21 height=21 name="box'+(i*width+j)+'"><br></td>');
+            stringC += '<td background="'+originalSources[i*width+j]+'"><img src="'+originalSources[i*width+j]+'" width=21 height=21 name="box'+(i*width+j)+'"><br></td>';
         }
-        $("#crucigrama").append('</tr>');
+        stringC += '</tr>';
     }
-    $("#crucigrama").append("</table>");
+    stringC += '</table>';
+    $("#crucigrama").append(stringC);
 }
 
 function drawAcross()
@@ -305,12 +306,12 @@ function drawAcross()
     for (i = 0; i < numAcross-1; i++)
     {
         $("#crucigrama").append('<a class="clues" href="javascript:void(clueClick('+i+'))" onMouseOver="mouseOver();" onMouseOut="mouseOut();">');
-        $("#crucigrama").append(types[i].substring(0, types[i].length-1)+'. '+clues[i]+'</A>');
+        $("#crucigrama").append(types[i].substring(0, types[i].length-1)+'. '+clues[i]+'</a>');
         if (!isNS4)
         $("#crucigrama").append('<BR>');
     }
     $("#crucigrama").append('<a class="clues" href="javascript:void(clueClick('+i+'))" onMouseOver="mouseOver();" onMouseOut="mouseOut();">');
-    $("#crucigrama").append(types[i].substring(0, types[i].length-1)+'. '+clues[i]+'</A>');
+    $("#crucigrama").append(types[i].substring(0, types[i].length-1)+'. '+clues[i]+'</a>');
     if (!isNS4)
     $("#crucigrama").append('<BR>');
 }
