@@ -1,0 +1,17 @@
+.heading {
+  font-family: Verdana, Geneva, Arial, sans-serif;
+  font-size: 12pt;
+  color: #990033;
+}
+
+A.clues {
+  font-family: Verdana, Geneva, Arial, sans-serif;
+  font-size: 10pt;
+  text-align: left;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+ color:red; text-decoration:underline;
+}

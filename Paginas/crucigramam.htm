@@ -1,0 +1,84 @@
+<HTML><HEAD><TITLE>JavaScript Crossword © Jan Mulder 1999/2002</TITLE>
+ 
+<style type="text/css">
+.heading {
+  font-family: Verdana, Geneva, Arial, sans-serif;
+  font-size: 12pt;
+  color: #990033;
+}
+ 
+.clues {
+  font-family: Verdana, Geneva, Arial, sans-serif;
+  font-size: 10pt;
+  text-align: left;
+  text-decoration: none;
+  color: black;
+}
+.clues:hover {
+  font-family: Verdana, Geneva, Arial, sans-serif;
+  font-size: 10pt;
+  text-align: left;
+  text-decoration: none;
+  color: #00008B;
+  font-weight: bold;
+  
+}
+</style>
+ 
+<SCRIPT language="JavaScript">
+var width=16;
+var height=16;
+var numAcross=6;
+var numDown=6;
+var wrongMessage='La respuesta es incorrecta, por favor intenta de nuevo';
+var doneAction='';
+var sourceDir='\imagenes\\'; //TODO: validar que se carguen las imagenes, según la jerarquía.
+ 
+var puzzleLayout = new Array(
+'-','-','-','1ac','5da','r','t','o','g','3dr','a','f','i','a','-','-', 
+'-','-','-','-','s','-','-','-','-','i','-','-','-','-','-','-', 
+'-','-','2av','e','n','u','s','-','-','m','-','-','-','-','-','-', 
+'1df','-','-','-','o','-','-','-','-','a','-','-','-','-','-','-', 
+'o','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-', 
+'s','-','-','-','-','-','-','-','-','-','2dt','-','-','-','-','4dl', 
+'6af','e','o','-','-','-','-','-','3ag','e','o','l','o','g','i','a', 
+'o','-','-','-','-','-','6dn','-','-','-','l','-','-','-','-','p', 
+'r','-','-','-','-','-','e','-','-','-','k','-','-','-','-','i', 
+'o','-','-','-','-','-','o','-','-','-','i','-','-','-','-','z', 
+'s','-','-','-','-','5aa','l','f','a','r','e','r','o','-','-','-', 
+'-','-','-','-','-','-','i','-','-','-','n','-','-','-','-','-', 
+'-','-','-','-','-','-','t','-','-','-','-','-','-','-','-','-', 
+'-','-','-','-','-','-','i','-','-','-','-','-','-','-','-','-', 
+'-','-','-','-','-','-','c','-','-','-','-','-','-','-','-','-', 
+'-','-','4ap','e','r','r','o','-','-','-','-','-','-','-','-','-' 
+);
+ 
+var puzzleData = new Array(
+"1A","Ciencia que se dedica a crear mapas","cartografia",
+"2A","Diosa de amor","venus",
+"3A","Ciencia que estudia la forma inferior del globo terrestre y sus componentes","geologia",
+"4A","Mamífero domestico","perro",
+"5A","El que hace objetos con arcilla","alfarero",
+"6A","Antónimo de bonito","feo",
+"1D","Utencilio de bolsillo para encender fuego","fosforos",
+"2D","Escritor del libro El señor de los anillos","tolkien",
+"3D","Repetición de una secuencia de fonemas","rima",
+"4D","Varilla de grafito y arcilla cubierta con madera","lapiz",
+"5D","Animal de carga próximo al caballo","asno",
+"6D","“Nueva edad de la piedra” periodo","neolitico"
+);
+</SCRIPT>
+ 
+<SCRIPT language="JavaScript" SRC="crossword.js"></SCRIPT>
+ 
+</HEAD><BODY>
+ 
+<SCRIPT language="JavaScript">
+  drawCrossword();
+  document.write("<BR>");
+  drawAcross();
+  document.write("<BR>");
+  drawDown();
+</SCRIPT>
+ 
+</BODY></HTML>
