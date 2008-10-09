@@ -48,7 +48,7 @@
         var numDown;
         var wrongMessage='La respuesta es incorrecta, por favor intenta de nuevo';
         var doneAction;
-        var sourceDir="/imagenes/";
+        var sourceDir;
         var puzzleLayout;
         var puzzleData;
         function cargarJuego(i) {
@@ -190,13 +190,16 @@
             $("#crucigrama").append("<BR>");
             drawAcross();
             $("#crucigrama").append("<BR>");
-            drawDown(); 
+            drawDown();
+            
+            $("#crucigrama").trigger("update");
             $("#crucigrama").css("visibility", "visible")
                             .css("position", "absolute")
                             .css("border-style", "solid")
                             .css("border-width", "3px");
 
             $("#bienvenida").css("visibility", "hidden");
+            alert($("#crucigrama").html());
         }
         $(document).ready(function(){
             $("#crucigrama").css("visibility", "hidden");
