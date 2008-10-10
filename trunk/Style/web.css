@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+.TituloDerivado {
+	font-size: x-large;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.Navegacion {font-size: medium; font-family: Arial, Helvetica, sans-serif; }
+.Banner {font-size: xx-large; font-family: Arial, Helvetica, sans-serif; }
+.TextoInfo {
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.subTitulos {font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; }
+.TitulosDeInfo {font-family: Arial, Helvetica, sans-serif; font-size: large;}
+.style6 {font-size: medium; font-family: Arial, Helvetica, sans-serif; font-weight: bold; }
+#ventana {
+	margin:auto;
+	margin-top:;
+	margin-bottom:30px;
+	margin-right:20%;
+	margin-left:20%;
+	height:500px;
+
+}
+#banner {
+	margin-top:auto;
+	margin-bottom:auto;
+	margin-right:0px;
+	margin-left:0px;
+	height:100px;
+
+}
+#navegacion {
+	margin-top:auto;
+	margin-bottom:auto;
+	margin-right:0px;
+	margin-left:0px;
+	height:2em;
+	font:Verdana, Arial, Helvetica, sans-serif;
+	font-size:large;
+}
