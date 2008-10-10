@@ -4,10 +4,16 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Main Menu</title>
+    <link href="/style/web.css" rel="stylesheet" type="text/css" />
+	<title>Menu Principal</title>
 	<!-- Date: 2008-10-03 -->
 </head>
 <body>
+<div id = "ventana">
+<div id = "banner">
+banner</div>
+<div class="Navegacion" id = "navegacion">
+Menu Principal</div>
 	<h1>Menu principal</h1><br>
 	Bienvenido {{ nombre }},
 	<a href="{{ logout_url }}">Logout</a><br>
@@ -15,5 +21,7 @@
 	<a href="{{ programa_memoria_url }}">Programa de memoria</a><br>
 	<a href="{{ marcador_url }}">Ver marcador</a><br>
 	<a href="{{ userInfo_url }}">Informacion de usuario</a>
+</div>
+
 </body>
 </html>
