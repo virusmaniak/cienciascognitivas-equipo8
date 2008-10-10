@@ -8,26 +8,30 @@ var arrayV;
 
 function hide(elemento){
     elemento.css("background", "blue")
-            .css("color", "blue");
+            .css("color", "blue")
+            .find("img").css("visibility", "hidden");
 }
 
 function show(elemento){
     elemento.css("background", "white")
-            .css("color", "black");
+            .css("color", "black")
+            .find("img").css("visibility", "visible");
 }
 
 function doneElement(elemento){
     elemento.css("background", "white")
             .css("visibility", "hidden")
             .css("color", "white")
-            .css("border-style", "none");
+            .css("border-style", "none")
+            .find("img").css("visibility", "hidden");
 }
 
 function matchFormat(elemento){
     elemento.css("border-color", "red")
             .css("background-color", "white")
             .css("border-width", "2px")
-            .css("color", "black");
+            .css("color", "black")
+            .find("img").css("visibility", "visible");
 }
 
 function openCard() {
@@ -41,7 +45,7 @@ function openCard() {
         }
         open2 = $(this);
         
-        if (open1.html() == $(this).html()){
+        if (open1.find("img").attr("src") == $(this).find("img").attr("src")){
             matchFormat(open1);
             matchFormat(open2);
             setTimeout(function(){
@@ -74,7 +78,8 @@ function finishedMemorama(){
 
 function makeDiv(col, row){
     //alert("col" +col + "row"+ row);
-    return "<div id=\"elem" + col + row + "\">" + arrayV[col-1][row-1] + "</div>";
+    return "<div id=\"elem" + col + row + "\">" + 
+            "<img src=\"/imagenes/" + arrayV[col-1][row-1] + "m.jpg\"></div>";
 }
 
 function formatCell(col, row){
@@ -95,6 +100,10 @@ function formatCell(col, row){
         .css("font-weight", "bold")
         .css("font-size", "60px")
         .css("font-family", "Helvetica, Verdana, Arial, sans-serif");
+    cell.find("img").attr("width", "80")
+                    .attr("height", "80")
+                    .css("visibility", "hidden");
+        
 }
 
 function loadMemorama(){
