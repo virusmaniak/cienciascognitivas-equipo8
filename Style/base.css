@@ -14,6 +14,9 @@ div#pen-picks input {
 #selected-pen-number {
 	font-weight:bold;
 }
+#powered-by {
+	font-size:8px;
+}
 #control-area label {
 	padding-right:10px;
 	font-weight:bold;
