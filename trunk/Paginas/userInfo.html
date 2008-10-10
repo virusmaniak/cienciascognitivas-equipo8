@@ -4,18 +4,27 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="/style/web.css" rel="stylesheet" type="text/css">
 	<title>Informacion de usuario</title>
 	<meta name="generator" content="TextMate http://macromates.com/">
 	<meta name="author" content="Salvador Gonzalez">
 	<!-- Date: 2008-10-03 -->
 </head>
 <body>
+<div id = "ventana">
+<div id = "banner">
+banner</div>
+<div class="Navegacion" id = "navegacion">
+<a href="{{ return_url }}">Regresar</a>
+</div>
 	{{ mensaje }}<br>
 	<form method="post" name="form" action="{{ submit_url }}">
 		Nombre: <input type="text" value="{{ nombre }}" name="nombre"><br>
 		Edad: <input type="text" value="{{ edad }}" name="edad"><br>
 		<input type="submit" value="Submit"><br>
 	</form>
-	<a href="{{ return_url }}">Return</a>
+	
+</div>
+
 </body>
 </html>
