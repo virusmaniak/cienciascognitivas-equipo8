@@ -46,21 +46,23 @@
         var height;
         var numAcross;
         var numDown;
-        var wrongMessage='La respuesta es incorrecta, por favor intenta de nuevo';
-        var doneAction;
         var sourceDir;
         var puzzleLayout;
         var puzzleData;
+		var wrongMessage='La respuesta es incorrecta, por favor intenta de nuevo';
+        var doneAction="acabar()";
+        var sourceDir='/imagenes/';
+		function acabar(){
+		hacerPreguntas=false;
+		$("#crucigrama").css("visibility", "hidden");
+        $("#finishScreen").css("visibility", "visible");
+		}
         function cargarJuego(i) {
             if(i==1){
                 width=8;
                 height=9;
                 numAcross=4;
-                numDown=4;
-                wrongMessage='La respuesta es incorrecta, por favor intenta de nuevo';
-                doneAction='';
-                sourceDir="/imagenes/";
-
+                numDown=4;     
                 puzzleLayout = new Array(
                     '1ba','4ds','u','n','c','i','o','n',
                     'r','e','-','-','-','-','-','-',
@@ -72,7 +74,6 @@
                     'n','-','-','-','-','-','a','-',
                     '4aa','l','e','m','a','n','i','a'
                 );
-
                 puzzleData = new Array(
                     "1A","Capital de Paraguay","asuncion",
                     "2A","Capital de China","pekin",
@@ -88,11 +89,7 @@
                 width=16;
                 height=16;
                 numAcross=6;
-                numDown=6;
-                wrongMessage='La respuesta es incorrecta, por favor intenta de nuevo';
-                doneAction='';
-                sourceDir='/imagenes/';
-
+                numDown=6;     
                 puzzleLayout = new Array(
                     '-','-','-','1ac','5da','r','t','o','g','3dr','a','f','i','a','-','-',
                     '-','-','-','-','s','-','-','-','-','i','-','-','-','-','-','-',
@@ -111,7 +108,6 @@
                     '-','-','-','-','-','-','c','-','-','-','-','-','-','-','-','-',
                     '-','-','4ap','e','r','r','o','-','-','-','-','-','-','-','-','-'
                 );
-
                 puzzleData = new Array(
                     "1A","Ciencia que se dedica a crear mapas","cartografia",
                     "2A","Diosa de amor","venus",
@@ -132,10 +128,6 @@
                 height=16;
                 numAcross=10;
                 numDown=8;
-                wrongMessage='La respuesta es incorrecta, por favor intenta de nuevo';
-                doneAction='';
-                sourceDir='/imagenes/';
-
                 puzzleLayout = new Array(
                     '1ba','n','g','3du','i','4dl','a','-','2bt','a','m','e','s','i','s','-',
                     'g','-','-','r','-','u','-','-','e','-','-','-','-','-','-','-',
@@ -176,7 +168,6 @@
                     "8D","Cuarta nota musical","fa"
                 );
             }
-
             if ( hacerPreguntas ){
                 startPreguntas();
             }
