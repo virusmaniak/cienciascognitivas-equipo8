@@ -1,23 +1,23 @@
 #summary Guía de estilo del sistema.
 
-=OMG=
+= Introduccion =
 
-= Introduction =
-
-La idea general del diseño. 
+El diseno sera amigable con finalidades practicas, facil de usar, sera de estilo minimalista. 
 
 = Consideraciones generales =
-Describe el look general de las páginas. Cómo le estamos haciendo para que sea accesible a las personas mayores (ej. font más grande) y por qué (recuerda poner citas) Esto lo vamos a necesitar para poner en la entrega final.
+
+Los fonts seran medianos y grandes para su facil lectura del usuario.
+Tendra colores claros, los cuales tienen como fin la tranquilidad del usuario. Asi como colores pocos llamativos con el fin de concentrar al usuario en la parte de la aplicacion que este utilizando.(1)
 
 = Elementos de la página =
 === Texto ===
- * Font a utilizar:
- * Tamaño:
- * Color: 
+ * Font a utilizar: Verdana
+ * Tamaño: mediano (16px)
+ * Color: negro
 
 === Links ===
- * Color de los links
- * Formato (subrayado o no, etc)
+ * Color: azul
+ * Formato: subrayado
 
 === Botones ===
  * Color de los botones en su estado normal
@@ -26,23 +26,23 @@ Describe el look general de las páginas. Cómo le estamos haciendo para que sea
  * Forma de los botones
 
 === Diseño del banner ===
- * Colores
- * Font
- * Imagenes?
- * Tamaño del banner (100% del ancho? Cuánto de altura?)
+ * Colores: claros, celestes.
+ * Font: LOMELY
+ * Imagenes: LOMELY
+ * Tamaño del banner: 100px de altura por 150px
 
 === Diseño de los recuadros de actividad ===
-Cómo se ven los cuadros en los que van los juegos (sudoku, crucigrama)
- * Lleva marco? de qué color?
- * Centrado?
- * Cómo va posisionado?
+ * Marco: Negro 2px.
+ * Posicion: Centrados en la pagina.
 
 === Diseño de las preguntas de memoria ===
-El formato de los recuadros que se aparecen a mitad del juego para hacer una pregunta
- * Tamaño
- * Posicionamiento
- * El font del texto de las preguntas
+ * Tamaño: 80px x 80px
+ * Posicion: Centrados en la pagina.
+ * Texto: Verdana
+ * Tamano.Texto: 20px
 
 === Diseño de la barra de navegación ===
-Qué tiene la barra de navegación
-Cómo se ve
+ * Tamano: 16px
+ * Texto: Verdana
+
+(1) Construtips.com. (2005, Septiembre 3). Colors. Retrieved Octubre 10, 2008, from http://www.construtips.com/color.html
