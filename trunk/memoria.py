@@ -10,12 +10,14 @@ Copyright (c) 2008 __MyCompanyName__. All rights reserved.
 import wsgiref.handlers
 import os
 import random
+import datetime
 
 from google.appengine.api import users
 from google.appengine.ext.webapp import template
 from google.appengine.ext import webapp
 from google.appengine.ext import db
 from userModel import registroDeUsuario
+from userModel import registroDeActividad
 
 # TODO: Clase que reciba los scores del usuario y los guarde en la base de datos
         
@@ -31,7 +33,7 @@ class Start(webapp.RequestHandler):
         
         random.seed()
         stringDato = """[ ["Cristobal Colon descubrio America", "Colon"], ["El tec fue fundado por Eugenio Garza Sada", "tec"] ]"""
-        registro.tipoDePregunta = random.randint(1,2)
+        registro.tipoDePreguntas = random.randint(1,2)
         registro.datos = stringDato
         registro.img1 = random.randint(1,15)
         registro.img2 = random.randint(1,15)
@@ -45,7 +47,7 @@ class Start(webapp.RequestHandler):
             'sudoku_url': '/memoria/juegos/sudoku',
             'memorama_url': '/memoria/juegos/memorama',
             'crucigrama_url': '/memoria/juegos/crucigrama',
-            'tipoDePreguntas': registro.tipoDePregunta,
+            'tipoDePreguntas': registro.tipoDePreguntas,
             'datos': registro.datos,
             'img1': registro.img1,
             'img2': registro.img2,
@@ -70,13 +72,14 @@ class End(webapp.RequestHandler):
             'sudoku_url': '/memoria/juegos/sudoku',
             'memorama_url': '/memoria/juegos/memorama',
             'crucigrama_url': '/memoria/juegos/crucigrama',
-            'tipoDePreguntas': registro.tipoDePregunta,
+            'tipoDePreguntas': registro.tipoDePreguntas,
             'datos': registro.datos,
             'img1': registro.img1,
             'img2': registro.img2,
-            'img3': registro.img3
+            'img3': registro.img3,
+            'send_url': '/memoria/submit'
         }
-        path = os.path.join(os.path.dirname(__file__), 'Paginas/juegos.html')
+        path = os.path.join(os.path.dirname(__file__), 'Paginas/fin.html')
         self.response.out.write(template.render(path, template_values))
 
 class Juegos(webapp.RequestHandler):
@@ -95,7 +98,7 @@ class Juegos(webapp.RequestHandler):
             'titulo': 'Error',
             'redirect_url': '/memoria',
             'mensaje': 'El juego no pudo ser cargado',
-            'tipoDePreguntas': registro.tipoDePregunta,
+            'tipoDePreguntas': registro.tipoDePreguntas,
             'datos': registro.datos,
             'img1': registro.img1,
             'img2': registro.img2,
@@ -114,8 +117,26 @@ class Juegos(webapp.RequestHandler):
         path = os.path.join(os.path.dirname(__file__), template_url)
         self.response.out.write(template.render(path, template_values))
 
+class Submit(webapp.RequestHandler):
+    def post(self):
+        user = users.get_current_user()
+        if not user:
+            return
+
+        
+        registro = registroDeActividad()
+        registro.usuario = user
+        registro.fecha = datetime.date.today()
+        registro.aciertos = int(self.request.get('aciertos'))
+        registro.preguntas = int(self.request.get('preguntas'))
+        registro.put()
+        
+        self.response.out.write("success")
+        
+
 def main():
-    application = webapp.WSGIApplication([('/memoria/juegos.*', Juegos),
+    application = webapp.WSGIApplication([('/memoria/submit', Submit),
+                                            ('/memoria/juegos.*', Juegos),
                                             ('/memoria/end', End),
                                             ('/memoria', Start)], debug=True)
     wsgiref.handlers.CGIHandler().run(application)

@@ -20,7 +20,7 @@ class registroDeUsuario(db.Model):
     
 
 class registroDeActividad(db.Model):
-    usuario = db.UserProperty(required=True)
-    fecha = db.DateProperty(required=True)
+    usuario = db.UserProperty()
+    fecha = db.DateProperty()
     aciertos = db.IntegerProperty(required=True, default=0)
     preguntas = db.IntegerProperty(required=True, default=0)
