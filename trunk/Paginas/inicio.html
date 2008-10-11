@@ -1,0 +1,66 @@
+<html>
+<head>
+    <title>Programa de memoria</title>
+    <script type="text/javascript" src="/scripts/jquery.js"></script>
+    <script type="text/javascript">
+        
+        var tipoDePreguntas = {{ tipoDePreguntas }};
+        var img1 = {{ img1 }};
+        var img2 = {{ img2 }};
+        var img3 = {{ img3 }};
+        var datos = {{ datos }};
+        
+    </script>
+    <script type="text/javascript">
+        
+        function formatDivImagenes(){
+            $("#imagenes").css("visibility", "visible")
+                         .css("width", "400px")
+                         .children().each( function() {
+                             $(this).css("visibility", "visible")
+                                    .find("img").attr("width", "80")
+                                                .attr("height", "80");
+                         });            
+        }
+        
+        function fillDivDatos(){
+            stringC = "";
+            for (i = 0; i < datos.length; i++){
+                stringC += "<div id='dato"+i+"'>"+datos[i][0]+"</div>";
+            }
+            $("#datos").append(stringC);
+        }
+        
+        $(document).ready( function (){
+            if (tipoDePreguntas == 1){
+                $("#img1").attr("src", "/imagenes/{{ img1 }}m.jpg");
+                $("#img2").attr("src", "/imagenes/{{ img2 }}m.jpg");
+                $("#img3").attr("src", "/imagenes/{{ img3 }}m.jpg");
+                formatDivImagenes();
+            } else {
+                $("#imagenes").html("");
+                fillDivDatos();
+            }
+        });
+    </script>
+</head>
+<body>
+    {{ nombre }}, {{ return_url }}<br>
+    <div id="hoja">
+        <div id="recordar">
+            <div id="imagenes">
+                Recuerda las siguientes im&aacute;genes:<br>
+                <div id='pic1'><img id='img1'></div>
+                <div id='pic2'><img id='img2'></div>
+                <div id='pic3'><img id='img3'></div>
+            </div>
+            <div id="datos">
+                Recuerda los siguientes datos:<br>
+            </div>
+        </div>
+        <a href="{{ sudoku_url }}">Sudoku</a><br>
+        <a href="{{ memorama_url }}">Memorama</a><br>
+        <a href="{{ crucigrama_url }}">Crucigrama</a><br>
+    </div>
+</body>
+</html>
