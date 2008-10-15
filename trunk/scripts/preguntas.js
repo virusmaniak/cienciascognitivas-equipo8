@@ -2,7 +2,7 @@
 var preguntasHechas = 0;
 var aciertos = 0;
 var pregunta2 = "Qué figura no te pedimos recordar";
-var pregunta1 = "Qué figuras te pedimos recordar? ";
+var pregunta1 = "Qué figura te pedimos recordar? ";
 var unoodos;
 var lugar;
 
@@ -13,7 +13,8 @@ function makeDivPregunta(){
 		lugar=Math.ceil(Math.random()*3);
         if(Math.random()>0.5){
 			pregunta=pregunta1;
-			unoodos=1;		
+			unoodos=1;
+			usado1=0;
 			for(i=1;i<=3;i++){
 				x = 0;
 				if(i==lugar){
@@ -27,7 +28,8 @@ function makeDivPregunta(){
 				} else {
 					do {
 						x=Math.ceil(Math.random()*15);
-					} while (img1 == x || img2 == x || img3 == x);
+					} while (img1 == x || img2 == x || img3 == x || x==usado1);
+					usado1=x;
 				}
 				respuestas+="<img src='/imagenes/" + x + "m.jpg'>";
 			}
@@ -41,12 +43,9 @@ function makeDivPregunta(){
 				do {
 						x=Math.ceil(Math.random()*15);
 					} while (img1 == x || img2 == x || img3 == x);
-					
 				} else {
 					do{
 					imagenres=Math.ceil(Math.random()*3);
-					alert(imagenres + "-" + usado);
-					
 					} while(imagenres==usado);
 					if(imagenres==1){
 						x = img1;
@@ -69,7 +68,7 @@ function makeDivPregunta(){
                             "\">" + pregunta + "<br>" +
                             respuestas + "</div>";
     } else {
-      //códigoparadatos
+	
     }
     
 }
