@@ -1,33 +1,79 @@
 
 var preguntasHechas = 0;
-var tipoDePregunta = 0; // 1 Para color, 2 para forma
 var aciertos = 0;
-var preguntaColor = "De qué color es la figura número ";
-var preguntaForma = "Qué forma tiene la figura número ";
-var colores = new Array ("red", "blue", "yellow");
+var pregunta2 = "Qué figura no te pedimos recordar";
+var pregunta1 = "Qué figuras te pedimos recordar? ";
+var unoodos;
+var lugar;
 
 function makeDivPregunta(){
-    tipoDePregunta = Math.floor(Math.random()*2 + 1);
-    pregunta = "";
-    if ( tipoDePregunta == 1 ){
-        pregunta = preguntaColor;
+    if ( tipoDePreguntas == 1 ){
+	    pregunta = "";
+		respuestas="";
+		lugar=Math.ceil(Math.random()*3);
+        if(Math.random()>0.5){
+			pregunta=pregunta1;
+			unoodos=1;		
+			for(i=1;i<=3;i++){
+				x = 0;
+				if(i==lugar){
+					imagenres=Math.ceil(Math.random()*3);
+					if(imagenres=1)
+						x = img1;
+					if(imagenres=2)
+						x = img2;
+					if(imagenres=3)
+						x = img3;
+				} else {
+					do {
+						x=Math.ceil(Math.random()*15);
+					} while (img1 == x || img2 == x || img3 == x);
+				}
+				respuestas+="<img src='/imagenes/" + x + "m.jpg'>";
+			}
+		} else {
+			pregunta=pregunta2;
+			unoodos=2;
+			usado=0;
+				for(i=1;i<=3;i++){
+				x = 0;
+				if(i==lugar){
+				do {
+						x=Math.ceil(Math.random()*15);
+					} while (img1 == x || img2 == x || img3 == x);
+					
+				} else {
+					do{
+					imagenres=Math.ceil(Math.random()*3);
+					alert(imagenres + "-" + usado);
+					
+					} while(imagenres==usado);
+					if(imagenres==1){
+						x = img1;
+						usado=1;
+						}
+					if(imagenres==2)
+						x = img2;{
+						usado=2;
+						}
+					if(imagenres==3){
+						x = img3;
+						usado=3;
+						}
+				}
+				respuestas+="<img src='/imagenes/" + x + "m.jpg'>";
+			}
+			
+		}
+		return "<div id=\"pregunta" + (++preguntasHechas) +
+                            "\">" + pregunta + "<br>" +
+                            respuestas + "</div>";
     } else {
-        pregunta = preguntaForma;
+      //códigoparadatos
     }
-    num = Math.floor( Math.random()*3 + 1 );
-    return "<div id=\"pregunta" + (++preguntasHechas) +
-                            "\">¿" + pregunta + num + "?<br>" +
-                            makeDivRespuesta(tipoDePregunta, num) + "</div>";
+    
 }
 
-function makeDivRespuesta(tipoDePregunta, num){
-    respuestas = ""
-    for (i = 1; i<= 3; i++){
-        respuestas += "<div id=\"pregunta" + preguntasHechas + "respuesta" + i + "\" title=\"";
-        respuestas += colores[i]  +"\">" + " </div>";
-    }
-    return respuestas;
-}
 
 function formatDivPregunta(elemento){
     elemento.css("position", "absolute")
@@ -80,5 +126,5 @@ function mostrarPregunta(){
 }
 
 function startPreguntas(){
-    setTimeout( mostrarPregunta, 10000 );
+    setTimeout( mostrarPregunta, 1000 );
 }
