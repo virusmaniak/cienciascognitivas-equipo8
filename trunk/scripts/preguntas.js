@@ -4,8 +4,8 @@ var timeOut = 1000;
 
 var preguntasHechas = 0;
 var aciertos = 0;
-var pregunta2 = "Qué figura no te pedimos recordar";
-var pregunta1 = "Qué figura te pedimos recordar? ";
+var pregunta2 = "¿Qué figura no te pedimos recordar?";
+var pregunta1 = "¿Qué figura te pedimos recordar? ";
 var unoodos;
 var lugar;
 
@@ -54,8 +54,8 @@ function makeDivPregunta(){
 						x = img1;
 						usado=1;
 						}
-					if(imagenres==2)
-						x = img2;{
+					if(imagenres==2){
+						x = img2;
 						usado=2;
 						}
 					if(imagenres==3){
@@ -71,6 +71,12 @@ function makeDivPregunta(){
                             "\">" + pregunta + "<br>" +
                             respuestas + "</div>";
     } else {
+	var preguntad1="¿Quién descubrió america?";
+	var preguntad2="¿Quién inventó el papel de baño?";
+	respuestad="ok";
+	return "<div id=\"pregunta" + (++preguntasHechas) +
+                            "\">" + preguntad1 + "<br>" +
+                            respuestad + "</div>";
 	
     }
     
