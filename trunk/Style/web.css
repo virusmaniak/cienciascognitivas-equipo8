@@ -19,7 +19,7 @@
 	border-color: black;
 	background-color:#FFFFFF;
 	margin:auto;
-	margin-top:5%;
+	margin-top:0%;
 	margin-bottom:30px;
 	margin-right:25%;
 	margin-left:25%;
@@ -27,24 +27,37 @@
 
 }
 #banner {
-	margin-top:auto;
+	margin-top:5%;
 	margin-bottom:auto;
-	margin-right:0px;
-	margin-left:0px;
+	margin-right:10%;
+	margin-left:10%;
 	height:100px;
 	background-color:#FFFFFF;
 
 }
-#navegacion {
-	border-style:ridge;
-	border-width: 0.5px;
-	border-color: black;
-	background-color:#00FFFF;
-	margin-top:auto;
+#regresar {
+	margin-top:0px;
 	margin-bottom:auto;
+	margin-left:0px:
+	margin-right:60%;
+	height:60px;
+	width:100px;
+	position:absolute;
+}
+#botones {
+	margin-top: 5%;
+	margin bottom:auto;
+	margin-right: 30%;
+	margin-left:30%;
+	height:50px;
+}
+
+#datos {
+	margin-top:5%;
+	margin-bottom:0px;
 	margin-right:0px;
 	margin-left:0px;
-	height:2em;
+	height:300px;
 	font:Verdana, Arial, Helvetica, sans-serif;
 	font-size:large;
 }
