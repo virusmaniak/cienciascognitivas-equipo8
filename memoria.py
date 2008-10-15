@@ -95,6 +95,7 @@ class Juegos(webapp.RequestHandler):
             'nombre': registro.nombre,
             'hacerPreguntas': 'true',
             'return_url': '/memoria',
+            'siguiente_url': '/memoria/end',
             'titulo': 'Error',
             'redirect_url': '/memoria',
             'mensaje': 'El juego no pudo ser cargado',

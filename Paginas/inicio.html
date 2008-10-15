@@ -17,22 +17,22 @@
             $("#imagenes").css("visibility", "visible")
                          .css("width", "400px")
                          .children().each( function() {
-                             $(this).css("visibility", "visible")
-                                    .find("img").attr("width", "80")
-                                                .attr("height", "80");
+                             $(this).attr("width", "80")
+                                    .attr("height", "80");
                          });            
         }
         
         function fillDivDatos(){
             stringC = "";
             for (i = 0; i < datos.length; i++){
-                stringC += "<div id='dato"+i+"'>"+datos[i][0]+"</div>";
+                stringC += datos[i][0]+ "<br>";
             }
             $("#datos").append(stringC);
         }
         
         $(document).ready( function (){
             if (tipoDePreguntas == 1){
+                $("#datos").html("");
                 $("#img1").attr("src", "/imagenes/{{ img1 }}m.jpg");
                 $("#img2").attr("src", "/imagenes/{{ img2 }}m.jpg");
                 $("#img3").attr("src", "/imagenes/{{ img3 }}m.jpg");
@@ -43,24 +43,36 @@
             }
         });
     </script>
+    <style type="text/css">
+        .contenidoDeHoja {
+            position: relative;
+            left: 30px;
+            width: 50%;
+        }
+    </style>
 </head>
 <body>
     {{ nombre }}, {{ return_url }}<br>
     <div id="hoja">
         <div id="recordar">
-            <div id="imagenes">
-                Recuerda las siguientes im&aacute;genes:<br>
-                <div id='pic1'><img id='img1'></div>
-                <div id='pic2'><img id='img2'></div>
-                <div id='pic3'><img id='img3'></div>
+            1. Recuerda lo siguiente:
+            <div id="imagenes" class="contenidoDeHoja">
+                <img id='img1'>
+                <img id='img2'>
+                <img id='img3'>
             </div>
-            <div id="datos">
-                Recuerda los siguientes datos:<br>
+            <div id="datos" class="contenidoDeHoja">
+                
             </div>
         </div>
-        <a href="{{ sudoku_url }}">Sudoku</a><br>
-        <a href="{{ memorama_url }}">Memorama</a><br>
-        <a href="{{ crucigrama_url }}">Crucigrama</a><br>
+        <div id="menuJuegos">
+            2. Selecciona un juego:<br>
+            <div id="juegos" class="contenidoDeHoja">
+                <a href="{{ sudoku_url }}">Sudoku</a><br>
+                <a href="{{ memorama_url }}">Memorama</a><br>
+                <a href="{{ crucigrama_url }}">Crucigrama</a><br>
+            </div>
+        </div>
     </div>
 </body>
 </html>
