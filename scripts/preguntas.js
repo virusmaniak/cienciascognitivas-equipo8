@@ -34,7 +34,7 @@ function makeDivPregunta(){
 					} while (img1 == x || img2 == x || img3 == x || x==usado1);
 					usado1=x;
 				}
-				respuestas+="<img src='/imagenes/" + x + "m.jpg'>";
+				respuestas+="<img alt='" + i + "' src='/imagenes/" + x + "m.jpg'>";
 			}
 		} else {
 			pregunta=pregunta2;
@@ -63,7 +63,7 @@ function makeDivPregunta(){
 						usado=3;
 						}
 				}
-				respuestas+="<img src='/imagenes/" + x + "m.jpg'>";
+				respuestas+="<img alt='" + i + "' src='/imagenes/" + x + "m.jpg'>";
 			}
 			
 		}
@@ -103,11 +103,21 @@ function formatDivPregunta(elemento){
 }
 
 function recibirClickImagen(){
-    alert($(this).attr("src"));
-    $("#pregunta"+preguntasHechas).html("").css("visibility", "hidden");
-    if (hacerPreguntas){
-        setTimeout( mostrarPregunta, timeOut );
+    caption = "";
+    if ($(this).attr("alt") == ("" + lugar)){
+        caption = "Correcto";
+    } else {
+        caption = "WROONNNG MOTHAFUCKAAA!!!";
     }
+    $("#pregunta"+preguntasHechas).html(caption)
+                                  .css("visibility", "visible");
+    
+    $("#pregunta"+preguntasHechas).click ( function (){
+                                      $(this).css("visibility", "hidden");
+                                      if (hacerPreguntas){
+                                          setTimeout( mostrarPregunta, timeOut );
+                                      }
+                                  });
 }
 
 function mostrarPregunta(){
@@ -116,6 +126,8 @@ function mostrarPregunta(){
     formatDivPregunta($("#pregunta" + preguntasHechas));
     if (tipoDePreguntas == 1){
         $("#pregunta" + preguntasHechas).children().click( recibirClickImagen );
+    } else {
+        $("#pregunta" + preguntasHechas).click ( function (){ $(this).css("visibility", "hidden"); });
     }
 }
 
