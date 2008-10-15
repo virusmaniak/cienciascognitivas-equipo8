@@ -14,11 +14,15 @@
 .TitulosDeInfo {font-family: Arial, Helvetica, sans-serif; font-size: large;}
 .style6 {font-size: medium; font-family: Arial, Helvetica, sans-serif; font-weight: bold; }
 #ventana {
+	border-style:solid;
+	border-width: 1px;
+	border-color: black;
+	background-color:#FFFFFF;
 	margin:auto;
-	margin-top:;
+	margin-top:5%;
 	margin-bottom:30px;
-	margin-right:20%;
-	margin-left:20%;
+	margin-right:25%;
+	margin-left:25%;
 	height:500px;
 
 }
@@ -28,9 +32,14 @@
 	margin-right:0px;
 	margin-left:0px;
 	height:100px;
+	background-color:#FFFFFF;
 
 }
 #navegacion {
+	border-style:ridge;
+	border-width: 0.5px;
+	border-color: black;
+	background-color:#00FFFF;
 	margin-top:auto;
 	margin-bottom:auto;
 	margin-right:0px;
