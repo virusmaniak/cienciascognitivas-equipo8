@@ -1,3 +1,6 @@
+//DEFINICIONES
+var timeOut = 1000;
+
 
 var preguntasHechas = 0;
 var aciertos = 0;
@@ -93,18 +96,11 @@ function formatDivPregunta(elemento){
             .css("font-family", "Helvetica, Verdana, Arial, sans-serif");
 }
 
-function formatDivRespuestas(){
-    for (i = 1; i <= 3; i++){
-        elemento = $("#pregunta" + preguntasHechas + "respuesta" + i);
-        elemento.css("visibility", "visible")
-                .css("width", "50px")
-                .css("height", "50px")
-                .css("background-color", colores[i-1]+"")
-                .css("position", "absolute")
-                .css("left", (i*80+20)+"px")
-                .css("border-style", "solid")
-                .css("border-width", "1px")
-                .css("top", "100px");
+function recibirClickImagen(){
+    alert($(this).attr("src"));
+    $("#pregunta"+preguntasHechas).html("").css("visibility", "hidden");
+    if (hacerPreguntas){
+        setTimeout( mostrarPregunta, timeOut );
     }
 }
 
@@ -112,18 +108,11 @@ function mostrarPregunta(){
     div = makeDivPregunta();
     $("body").append(div);
     formatDivPregunta($("#pregunta" + preguntasHechas));
-    formatDivRespuestas();
-    $("#pregunta"+preguntasHechas).click( function() {
-        $(this).css("visibility", "hidden");
-        $(this).contents().each( function(){
-           $(this).css("visibility", "hidden"); 
-        });
-        if (preguntasHechas < preguntasTotales){
-            setTimeout( mostrarPregunta, 10000 );
-        }
-    });
+    if (tipoDePreguntas == 1){
+        $("#pregunta" + preguntasHechas).children().click( recibirClickImagen );
+    }
 }
 
 function startPreguntas(){
-    setTimeout( mostrarPregunta, 1000 );
+    setTimeout( mostrarPregunta, timeOut );
 }
