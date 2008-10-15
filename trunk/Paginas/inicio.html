@@ -43,34 +43,31 @@
             }
         });
     </script>
-    <style type="text/css">
-        .contenidoDeHoja {
-            position: relative;
-            left: 30px;
-            width: 50%;
-        }
-    </style>
+    <link href="/style/web.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    {{ nombre }}, {{ return_url }}<br>
-    <div id="hoja">
-        <div id="recordar">
-            1. Recuerda lo siguiente:
-            <div id="imagenes" class="contenidoDeHoja">
-                <img id='img1'>
-                <img id='img2'>
-                <img id='img3'>
-            </div>
-            <div id="datos" class="contenidoDeHoja">
+    <div id = "ventana">
+        <div id = "banner">Banner</div>
+        <div id = "navegacion" class = "Navegacion">Regresar</div>
+        <div id="hoja">
+            <div id="recordar">
+                1. Recuerda lo siguiente:
+                <div id="imagenes" class="contenidoDeHoja">
+                    <img id='img1'>
+                    <img id='img2'>
+                    <img id='img3'>
+                </div>
+                <div id="datos" class="contenidoDeHoja">
                 
+                </div>
             </div>
-        </div>
-        <div id="menuJuegos">
-            2. Selecciona un juego:<br>
-            <div id="juegos" class="contenidoDeHoja">
-                <a href="{{ sudoku_url }}">Sudoku</a><br>
-                <a href="{{ memorama_url }}">Memorama</a><br>
-                <a href="{{ crucigrama_url }}">Crucigrama</a><br>
+            <div id="menuJuegos">
+                2. Selecciona un juego:<br>
+                <div id="juegos" class="contenidoDeHoja">
+                    <a href="{{ sudoku_url }}">Sudoku</a><br>
+                    <a href="{{ memorama_url }}">Memorama</a><br>
+                    <a href="{{ crucigrama_url }}">Crucigrama</a><br>
+                </div>
             </div>
         </div>
     </div>
