@@ -15,7 +15,6 @@
         
         function formatDivImagenes(){
             $("#imagenes").css("visibility", "visible")
-                         .css("width", "400px")
                          .children().each( function() {
                              $(this).attr("width", "80")
                                     .attr("height", "80");
@@ -27,12 +26,12 @@
             for (i = 0; i < datos.length; i++){
                 stringC += datos[i][0]+ "<br>";
             }
-            $("#datos").append(stringC);
+            $("#datosP").append(stringC);
         }
         
         $(document).ready( function (){
             if (tipoDePreguntas == 1){
-                $("#datos").html("");
+                $("#datosP").html("");
                 $("#img1").attr("src", "/imagenes/{{ img1 }}m.jpg");
                 $("#img2").attr("src", "/imagenes/{{ img2 }}m.jpg");
                 $("#img3").attr("src", "/imagenes/{{ img3 }}m.jpg");
@@ -46,9 +45,9 @@
     <link href="/style/web.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+    <div id = "regresar"><a href="{{ return_url }}">Regresar</a></div>
     <div id = "ventana">
         <div id = "banner">Banner</div>
-        <div id = "navegacion" class = "Navegacion">Regresar</div>
         <div id="hoja">
             <div id="recordar">
                 1. Recuerda lo siguiente:
@@ -57,16 +56,23 @@
                     <img id='img2'>
                     <img id='img3'>
                 </div>
-                <div id="datos" class="contenidoDeHoja">
+                <div id="datosP" class="contenidoDeHoja">
                 
                 </div> 
             </div>
+            <hr>
             <div id="menuJuegos">
                 2. Selecciona un juego:<br>
-                <div id="juegos" class="contenidoDeHoja">
-                    <a href="{{ sudoku_url }}">Sudoku</a><br>
-                    <a href="{{ memorama_url }}">Memorama</a><br>
-                    <a href="{{ crucigrama_url }}">Crucigrama</a><br>
+                <div id = "datos">
+                  <div id = "botonesChicos">
+                      <a href="{{ sudoku_url }}">Jugar sudoku</a><br>
+                  </div>
+                  <div id = "botonesChicos">
+                      <a href="{{ memorama_url }}">Jugar memorama</a><br>
+                  </div>
+                  <div id = "botonesChicos">
+                      <a href="{{ crucigrama_url }}">Jugar crucigrama</a><br>
+                  </div>
                 </div>
             </div>
         </div>

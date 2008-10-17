@@ -1,39 +1,39 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
+    "http://www.w3.org/TR/html4/loose.dtd">
 
 <html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link href="../style/web.css" rel="stylesheet" type="text/css">
-	<title>Informacion de usuario</title>
-	<meta name="generator" content="TextMate http://macromates.com/">
-	<meta name="author" content="Salvador Gonzalez">
-	<!-- Date: 2008-10-03 -->
+    <title>Informacion de usuario</title>
+    <meta name="generator" content="TextMate http://macromates.com/">
+    <meta name="author" content="Salvador Gonzalez">
+    <!-- Date: 2008-10-03 -->
 </head>
 <body>
-<body>
-<div id = "regresar"> Mi botonsote</div>
-<div id = "ventana">
-<div id = "banner">
-Hello
-</div>
-<div id = "datos">
-	<p align="center">{{ mensaje }}</p>
-	<p><br>
-    </p>
-	<form method="post" name="form" action="{{ submit_url }}">
-		<div align="center">Nombre: 
-		  <input type="text" value="{{ nombre }}" name="nombre">
-		  <br>
-		Edad: 
-		<input type="text" value="{{ edad }}" name="edad">
-		<br>
-		<input type="submit" value="Submit">
-		<br>
-	    </div>
-	</form>
-</div>
-</div>
+    <body>
+        <div id = "regresar"><a href="{{ return_url }}">Regresar</a></div>
+        <div id = "ventana">
+            <div id = "banner">
+                Datos de usuario
+            </div>
+            <div id = "datos">
+                <p align="center">{{ mensaje }}</p>
+                <p><br>
+                </p>
+                <form method="post" name="form" action="{{ submit_url }}">
+                    <div align="center">Nombre: 
+                        <input type="text" value="{{ nombre }}" name="nombre">
+                        <br>
+                        Edad: 
+                        <input type="text" value="{{ edad }}" name="edad">
+                        <br>
+                        <input type="submit" value="Submit">
+                        <br>
+                    </div>
+                </form>
+            </div>
+        </div>
 
-</body>
-</html>
+    </body>
+    </html>
