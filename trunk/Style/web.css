@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+
 .TituloDerivado {
 	font-size: x-large;
 	font-family: Helvetica, Verdana, Arial, sans-serif;
@@ -45,6 +46,7 @@
 	height:60px;
 	width:100px;
 	position:absolute;
+	background-color: #999999;
 }
 
 #botones {
@@ -52,7 +54,10 @@
 	margin bottom:auto;
 	margin-right: 30%;
 	margin-left:30%;
-	height:50px;
+	height:30px;
+	background-color: #999999;
+	padding: 10px;
+	text-align: center;
 }
 
 #botonesChicos {
@@ -60,7 +65,10 @@
 	margin bottom:auto;
 	margin-right: 30%;
 	margin-left:30%;
-	height:50px;
+	height:30px;
+	padding: 10px;
+	text-align: center;
+	background-color: #999999;
 }
 
 #datos {

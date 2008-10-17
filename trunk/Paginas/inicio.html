@@ -2,6 +2,7 @@
 <head>
     <title>Programa de memoria</title>
     <script type="text/javascript" src="/scripts/jquery.js"></script>
+    <script type="text/javascript" src="/scripts/navegacion.js"></script>
     <script type="text/javascript">
         
         var tipoDePreguntas = {{ tipoDePreguntas }};
@@ -45,7 +46,7 @@
     <link href="/style/web.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <div id = "regresar"><a href="{{ return_url }}">Regresar</a></div>
+    <div id = "regresar"  onMouseOver="hacerBoton('{{return_url}}', $(this));">Regresar</div>
     <div id = "ventana">
         <div id = "banner">Banner</div>
         <div id="hoja">
@@ -64,14 +65,14 @@
             <div id="menuJuegos">
                 2. Selecciona un juego:<br>
                 <div id = "datos">
-                  <div id = "botonesChicos">
-                      <a href="{{ sudoku_url }}">Jugar sudoku</a><br>
+                  <div id = "botonesChicos" onMouseOver="hacerBoton('{{sudoku_url}}', $(this));">
+                      Jugar sudoku
                   </div>
-                  <div id = "botonesChicos">
-                      <a href="{{ memorama_url }}">Jugar memorama</a><br>
+                  <div id = "botonesChicos" onMouseOver="hacerBoton('{{memorama_url}}', $(this));">
+                      Jugar memorama
                   </div>
-                  <div id = "botonesChicos">
-                      <a href="{{ crucigrama_url }}">Jugar crucigrama</a><br>
+                  <div id = "botonesChicos" onMouseOver="hacerBoton('{{crucigrama_url}}', $(this));">
+                      Jugar crucigrama
                   </div>
                 </div>
             </div>
