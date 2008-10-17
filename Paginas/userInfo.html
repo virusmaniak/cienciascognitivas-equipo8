@@ -9,10 +9,12 @@
     <meta name="generator" content="TextMate http://macromates.com/">
     <meta name="author" content="Salvador Gonzalez">
     <!-- Date: 2008-10-03 -->
+    <script type="text/javascript" src="/scripts/jquery.js"></script>
+    <script type="text/javascript" src="/scripts/navegacion.js"></script>
 </head>
 <body>
     <body>
-        <div id = "regresar"><a href="{{ return_url }}">Regresar</a></div>
+        <div id = "regresar"  onMouseOver="hacerBoton('{{return_url}}', $(this));">Regresar</div>
         <div id = "ventana">
             <div id = "banner">
                 Datos de usuario

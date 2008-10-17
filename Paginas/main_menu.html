@@ -5,25 +5,27 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link href="../style/web.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/scripts/jquery.js"></script>
+    <script type="text/javascript" src="/scripts/navegacion.js"></script>
     <title>Menu Principal</title>
     <!-- Date: 2008-10-03 -->
 </head>
 <body>
 
-    <div id = "regresar"><a href="{{ logout_url }}">Logout</a></div>
+    <div id = "regresar" onMouseOver="hacerBoton('{{logout_url}}', $(this));">Logout</div>
     <div id = "ventana">
         <div id = "banner">
             Bienvenido {{ nombre }},
         </div>
         <div id = "datosJuegos">
-            <div id = "botones">
-                <a href="{{ programa_memoria_url }}">Programa de memoria</a>
+            <div id = "botones" onMouseOver="hacerBoton('{{programa_memoria_url}}', $(this));">
+                Programa de memoria
             </div>
-            <div id = "botones">
-                <a href="{{ actividades_url }}">Actividades de entretenimiento</a>
+            <div id = "botones" onMouseOver="hacerBoton('{{actividades_url}}', $(this));">
+                Actividades de entretenimiento
             </div>
-            <div id = "botones">
-                <a href="{{ userInfo_url }}">Informaci&oacute;n de usuario</a>
+            <div id = "botones" onMouseOver="hacerBoton('{{userInfo_url}}', $(this));">
+                Informaci&oacute;n de usuario
             </div>
         </div>
         Todos los derechos reservados.
