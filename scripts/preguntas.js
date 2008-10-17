@@ -103,21 +103,29 @@ function formatDivPregunta(elemento){
 }
 
 function recibirClickImagen(){
+    $("#pregunta"+preguntasHechas).html("")
+                                  .css("visibility", "hidden");
+                                  
     caption = "";
     if ($(this).attr("alt") == ("" + lugar)){
         caption = "Correcto";
     } else {
-        caption = "WROONNNG MOTHAFUCKAAA!!!";
+        caption = "Incorrecto";
     }
-    $("#pregunta"+preguntasHechas).html(caption)
-                                  .css("visibility", "visible");
     
-    $("#pregunta"+preguntasHechas).click ( function (){
+    htmlResponse  = "<div id='responder" + preguntasHechas + "'>";
+    htmlResponse += caption + "<br><img src='/imagenes/'" + img1 +"m.jpg'>";
+    htmlResponse += "<img src='/imagenes/" + img2 + "m.jpg'>";
+    htmlResponse += "<img src='/imagenes/" + img3 + "m.jpg'></div>";
+    $("body").append(htmlResponse);
+    formatDivPregunta($("#responder"+ preguntasHechas));
+    $("#responder"+preguntasHechas).click ( function (){
                                       $(this).css("visibility", "hidden");
                                       if (hacerPreguntas){
                                           setTimeout( mostrarPregunta, timeOut );
                                       }
                                   });
+                                  
 }
 
 function mostrarPregunta(){
