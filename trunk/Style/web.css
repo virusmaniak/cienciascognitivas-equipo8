@@ -23,18 +23,20 @@
 	margin-bottom:30px;
 	margin-right:25%;
 	margin-left:25%;
-	height:500px;
+	height:450px;
 
 }
+
 #banner {
 	margin-top:5%;
-	margin-bottom:auto;
+	margin-bottom:0%;
 	margin-right:10%;
 	margin-left:10%;
 	height:100px;
 	background-color:#FFFFFF;
 
 }
+
 #regresar {
 	margin-top:0px;
 	margin-bottom:auto;
@@ -44,6 +46,7 @@
 	width:100px;
 	position:absolute;
 }
+
 #botones {
 	margin-top: 5%;
 	margin bottom:auto;
@@ -53,11 +56,11 @@
 }
 
 #datos {
-	margin-top:5%;
+	margin-top:0%;
 	margin-bottom:0px;
 	margin-right:0px;
 	margin-left:0px;
-	height:300px;
+	height:60%;
 	font:Verdana, Arial, Helvetica, sans-serif;
 	font-size:large;
 }

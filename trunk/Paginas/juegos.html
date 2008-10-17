@@ -9,18 +9,35 @@
 	<meta name="author" content="Salvador Gonzalez">
     <link href="/style/web.css" rel="stylesheet" type="text/css">
 	<!-- Date: 2008-10-06 -->
+    <style type="text/css">
+	<!--
+		@import url("../Style/web.css");
+
+	-->
+	</style>
 </head>
 <body>
+
+<body>
+<div id = "regresar"> Mi botonsote</div>
 <div id = "ventana">
 <div id = "banner">
-banner</div>
-<div class="Navegacion" id = "navegacion"> 
-<a href="{{ menu_url }}">Menu Principal</a>
+Hello
 </div>
-<p align="left" class="TituloDerivado">Bienvenido {{ nombre }} <br>
+Bienvenido {{ nombre }}
+<div id = "datos">
+  <div id = "botones">
   <a href="{{ sudoku_url }}">Jugar sudoku</a><br>
+  </div>
+  <div id = "botones">
   <a href="{{ memorama_url }}">Jugar memorama</a><br>
+  </div>
+  <div id = "botones">
   <a href="{{ crucigrama_url }}">Jugar crucigrama</a><br>
+  </div>
+</div>
+Todos los derechos reservados.
+</div>
 </p>
 </div>
 </body>
