@@ -71,12 +71,11 @@ function makeDivPregunta(){
                             "\">" + pregunta + "<br>" +
                             respuestas + "</div>";
     } else {
-	var preguntad1="¿Quién descubrió america?";
-	var preguntad2="¿Quién inventó el papel de baño?";
-	respuestad="ok";
+	var preguntad1=preguntaDatos[preguntasHechas][1];
+	respuestad=preguntaDatos[preguntasHechas][2];
 	return "<div id=\"pregunta" + (++preguntasHechas) +
                             "\">" + preguntad1 + "<br>" +
-                            respuestad + "</div>";
+                            "_________"+ "</div>";
 	
     }
     
@@ -135,7 +134,7 @@ function mostrarPregunta(){
     if (tipoDePreguntas == 1){
         $("#pregunta" + preguntasHechas).children().click( recibirClickImagen );
     } else {
-        $("#pregunta" + preguntasHechas).click ( function (){ $(this).css("visibility", "hidden"); });
+        $("#pregunta" + preguntasHechas).click ( function (){ $(this).css("visibility", "hidden");  setTimeout( mostrarPregunta, timeOut );});
     }
 }
 
