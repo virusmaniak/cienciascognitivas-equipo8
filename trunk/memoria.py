@@ -43,7 +43,7 @@ class Start(webapp.RequestHandler):
         
         template_values = {
             'nombre': registro.nombre,
-            'menu_url': '/menu',
+            'return_url': '/menu',
             'sudoku_url': '/memoria/juegos/sudoku',
             'memorama_url': '/memoria/juegos/memorama',
             'crucigrama_url': '/memoria/juegos/crucigrama',
@@ -68,7 +68,7 @@ class End(webapp.RequestHandler):
 
         template_values = {
             'nombre': registro.nombre,
-            'menu_url': '/menu',
+            'return_url': '/menu',
             'sudoku_url': '/memoria/juegos/sudoku',
             'memorama_url': '/memoria/juegos/memorama',
             'crucigrama_url': '/memoria/juegos/crucigrama',
@@ -93,12 +93,12 @@ class Juegos(webapp.RequestHandler):
 
         template_values = {
             'nombre': registro.nombre,
-            'hacerPreguntas': 'true',
             'return_url': '/memoria',
             'siguiente_url': '/memoria/end',
             'titulo': 'Error',
             'redirect_url': '/memoria',
             'mensaje': 'El juego no pudo ser cargado',
+            'hacerPreguntas': 'true',
             'tipoDePreguntas': registro.tipoDePreguntas,
             'datos': registro.datos,
             'img1': registro.img1,

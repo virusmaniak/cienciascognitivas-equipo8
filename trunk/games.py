@@ -27,7 +27,7 @@ class GamesMenu(webapp.RequestHandler):
         
         template_values = {
             'nombre': registro.nombre,
-            'menu_url': '/menu',
+            'return_url': '/menu',
             'sudoku_url': '/games/sudoku',
             'memorama_url': '/games/memorama',
             'crucigrama_url': '/games/crucigrama'
@@ -46,11 +46,16 @@ class Juegos(webapp.RequestHandler):
 
         template_values = {
             'nombre': registro.nombre,
-            'hacerPreguntas': 'false',
             'return_url': '/games',
             'titulo': 'Error',
             'redirect_url': '/games',
-            'mensaje': 'El juego no pudo ser cargado'
+            'mensaje': 'El juego no pudo ser cargado',
+            'hacerPreguntas': 'false',
+            'tipoDePreguntas': registro.tipoDePreguntas,
+            'datos': registro.datos,
+            'img1': registro.img1,
+            'img2': registro.img2,
+            'img3': registro.img3
         }
         
         template_url = 'Paginas/mensaje.html'
