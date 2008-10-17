@@ -1,47 +1,32 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
+    "http://www.w3.org/TR/html4/loose.dtd">
 
 <html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link href="../style/web.css" rel="stylesheet" type="text/css" />
-	<title>Menu Principal</title>
-	<!-- Date: 2008-10-03 -->
+    <title>Menu Principal</title>
+    <!-- Date: 2008-10-03 -->
 </head>
 <body>
 
-<div id = "regresar"> Mi botonsote</div>
-<div id = "ventana">
-<div id = "banner">
-Hello
-</div>
-<div id = "datos">
-  <div id = "botones">
-  boton1
-  </div>
-  <div id = "botones">
-  boton2
-  </div>
-  <div id = "botones">
-  boton3
-  </div>
-</div>
-Todos los derechos reservados.
-</div>
-
-<div id = "ventana">
-    <div id = "banner">banner</div>
-    <div id = "navegacion" class="Navegacion">
-	    Menu principal
-	    Bienvenido {{ nombre }},
-	</div>
-	<a href="{{ logout_url }}">Logout</a><br>
-	<a href="{{ actividades_url }}">Actividades de entretenimiento</a><br>
-	<a href="{{ programa_memoria_url }}">Programa de memoria</a><br>
-	<a href="{{ marcador_url }}">Ver marcador</a><br>
-    <a href="{{ userInfo_url }}">Informacion de usuario</a>
-    
-</div>
-
+    <div id = "regresar"><a href="{{ logout_url }}">Logout</a></div>
+    <div id = "ventana">
+        <div id = "banner">
+            Bienvenido {{ nombre }},
+        </div>
+        <div id = "datosJuegos">
+            <div id = "botones">
+                <a href="{{ programa_memoria_url }}">Programa de memoria</a>
+            </div>
+            <div id = "botones">
+                <a href="{{ actividades_url }}">Actividades de entretenimiento</a>
+            </div>
+            <div id = "botones">
+                <a href="{{ userInfo_url }}">Informaci&oacute;n de usuario</a>
+            </div>
+        </div>
+        Todos los derechos reservados.
+    </div>
 </body>
 </html>
