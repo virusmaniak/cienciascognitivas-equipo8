@@ -1,7 +1,10 @@
 var botonesRegistrados = new Array();
 
 function hacerBoton(url, objeto){
-
+    if(objeto.attr("id")=="botones") {
+        objeto.css("background-image", "url(../imagenes/mouseOver.png)");
+    }
+    
     for (i = 0; i < botonesRegistrados.length; i++) {
         if ( botonesRegistrados[i].html() == objeto.html()){
             return;
@@ -11,10 +14,14 @@ function hacerBoton(url, objeto){
     botonesRegistrados.push (objeto);
     
     objeto.mousedown( function(){
-        objeto.css("background-color", "#660000");
+        if (objeto.attr("id") == "botones"){
+            objeto.css("background-image", "url(../imagenes/botonPressed.png)");
+        }
     });
     objeto.mouseout( function(){
-        objeto.css("background-color", "#999999");
+        if (objeto.attr("id") == "botones"){
+            objeto.css("background-image", "url(../imagenes/boton2.png)");
+        }
     })
     objeto.mouseup( function() {
         window.location = url;

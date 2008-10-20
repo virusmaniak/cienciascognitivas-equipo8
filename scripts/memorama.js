@@ -110,13 +110,16 @@ function loadMemorama(){
     if ( hacerPreguntas ){
         startPreguntas();
     }
+    
+    $("#ventana").css("visibility", "hidden");
     $("#memorama").html("");
     $("#memorama").css("visibility", "visible")
                   .css("position", "absolute")
                   .css("border-style", "solid")
                   .css("border-width", "3px")
                   .css("width", ((cols * 100 + 5)+"px"))
-                  .css("height", ((rows * 100 + 5)+"px"));
+                  .css("height", ((rows * 100 + 5)+"px"))
+                  .css("top", "5%");
     
     $("#bienvenida").css("visibility", "hidden");
     

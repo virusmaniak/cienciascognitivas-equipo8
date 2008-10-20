@@ -46,37 +46,33 @@
     <link href="/style/web.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <div id = "regresar"  onMouseOver="hacerBoton('{{return_url}}', $(this));">Regresar</div>
+    <div id = "regresar"  onMouseOver="hacerBoton('{{return_url}}', $(this));"></div>
     <div id = "ventana">
-        <div id = "banner">Banner</div>
-        <div id="hoja">
-            <div id="recordar">
-                1. Recuerda lo siguiente:
-                <div id="imagenes" class="contenidoDeHoja">
-                    <img id='img1'>
-                    <img id='img2'>
-                    <img id='img3'>
-                </div>
-                <div id="datosP" class="contenidoDeHoja">
-                
-                </div> 
+        <div class="TituloDerivado" align="center">Bienvenido {{ nombre }}</div>
+        <div id = "banner">
+            1. Recuerda lo siguiente:
+            <div id="imagenes" style="text-align: center;">
+                <img id='img1'>
+                <img id='img2'>
+                <img id='img3'>
             </div>
-            <hr>
-            <div id="menuJuegos">
-                2. Selecciona un juego:<br>
-                <div id = "datos">
-                  <div id = "botonesChicos" onMouseOver="hacerBoton('{{sudoku_url}}', $(this));">
-                      Jugar sudoku
-                  </div>
-                  <div id = "botonesChicos" onMouseOver="hacerBoton('{{memorama_url}}', $(this));">
-                      Jugar memorama
-                  </div>
-                  <div id = "botonesChicos" onMouseOver="hacerBoton('{{crucigrama_url}}', $(this));">
-                      Jugar crucigrama
-                  </div>
-                </div>
+            <div id="datosP"></div>
+        </div>
+        <div id="hoja">
+            <div id = "datos">
+             <div style="margin-left: 10%;"> 2. Selecciona un juego:</div>
+              <div id = "botones" onMouseOver="hacerBoton('{{sudoku_url}}', $(this));">
+                  Jugar sudoku
+              </div>
+              <div id = "botones" onMouseOver="hacerBoton('{{memorama_url}}', $(this));">
+                  Jugar memorama
+              </div>
+              <div id = "botones" onMouseOver="hacerBoton('{{crucigrama_url}}', $(this));">
+                  Jugar crucigrama
+              </div>
             </div>
         </div>
+        Derechos reservados
     </div>
 </body>
 </html>
