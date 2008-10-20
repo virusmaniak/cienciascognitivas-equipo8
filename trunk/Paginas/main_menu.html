@@ -12,23 +12,28 @@
 </head>
 <body>
 
-    <div id = "regresar" onMouseOver="hacerBoton('{{logout_url}}', $(this));">Logout</div>
-    <div id = "ventana">
-        <div id = "banner">
-            Bienvenido {{ nombre }},
-        </div>
-        <div id = "datosJuegos">
-            <div id = "botones" onMouseOver="hacerBoton('{{programa_memoria_url}}', $(this));">
-                Programa de memoria
-            </div>
-            <div id = "botones" onMouseOver="hacerBoton('{{actividades_url}}', $(this));">
-                Actividades de entretenimiento
-            </div>
-            <div id = "botones" onMouseOver="hacerBoton('{{userInfo_url}}', $(this));">
-                Informaci&oacute;n de usuario
-            </div>
-        </div>
-        Todos los derechos reservados.
+    <div id = "regresar" onMouseOver="hacerBoton('{{logout_url}}', $(this));">
     </div>
+	<div id = "ventana">
+        <div align="center" class="TituloDerivado">Bienvenido {{ nombre }}
+      </div>
+        <div id = "banner">
+      </div>
+      	<div id = "datos">
+          <div class="Navegacion" id = "botones" onMouseOver="hacerBoton('{{programa_memoria_url}}', $(this));">
+            Programa de memoria            
+          </div>
+              
+            <div class="Navegacion" id = "botones" onMouseOver="hacerBoton('{{actividades_url}}', $(this));">
+            Actividades de Entretenimiento            
+          </div>
+            <div class="Navegacion" id = "botones" onMouseOver="hacerBoton('{{userInfo_url}}', $(this));">
+            Informacion de usuario            
+          </div>
+      	</div>
+        
+        <div align="center">Todos los derechos Reservados
+        </div>
+	</div>
 </body>
 </html>
