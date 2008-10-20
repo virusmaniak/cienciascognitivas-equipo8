@@ -15,21 +15,24 @@
 .TitulosDeInfo {font-family: Arial, Helvetica, sans-serif; font-size: large;}
 .style6 {font-size: medium; font-family: Arial, Helvetica, sans-serif; font-weight: bold; }
 #ventana {
+    text-align: center;
 	background-color:#FFFFFF;
 	margin:auto;
-	margin-top:0%;
+	margin-top:5%;
 	margin-bottom:30px;
 	margin-right:25%;
 	margin-left:20%;
-	height:550px;
 	border-color:#0066FF;
 	border-width:1px;
 	border-style:solid;
 	max-width:650px;
 	min-width:550px;
+	max-height: 550px;
+	min-height: 300px;
 }
 
 #banner {
+    text-align: left;
 	margin-top:5%;
 	margin-bottom:0%;
 	margin-right:10%;
@@ -62,29 +65,17 @@
 	margin-left:30%;
 	height:40px;
 	width:200px;
-	background-color: #999999;
 	padding: 10px;
 	text-align: center;
 	
 }
 
-#botonesChicos {
-	margin-top: 1%;
-	margin-bottom:auto;
-	margin-right: 30%;
-	margin-left:30%;
-	height:30px;
-	padding: 10px;
-	text-align: center;
-	background-color: #999999;
-}
 
 #datos {
 	margin-top:5%;
-	margin-bottom:0%;
 	margin-right:0px;
 	margin-left:0px;
-	height:60%;
+	padding-bottom: 5%;
 	font:Verdana, Arial, Helvetica, sans-serif;
 	font-size:large;
 	border-top-color:#0066FF;
