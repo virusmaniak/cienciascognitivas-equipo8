@@ -5,7 +5,7 @@
     <meta name="generator" content="HTML Tidy for Windows (vers 14 February 2006), see www.w3.org" />
     <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
     <title>Crucigrama</title>
-    <link href="/style/web.css" rel="stylesheet" type="text/css">
+    <link href="../style/web.css" rel="stylesheet" type="text/css">
     <style type="text/css">
         .heading {
           font-family: Verdana, Geneva, Arial, sans-serif;
@@ -215,11 +215,13 @@
     <script language="JavaScript" SRC="/scripts/crossword.js"></script>
 </head>
 <body>
-    <!--
-        TODO: Darle formato a la pagina
-    -->
-    <h1>Crucigrama</h1>
-	{{ nombre }} &nbsp;&nbsp;&nbsp; <a href="{{ return_url }}">Regresar</a><p>
+    <div id = "regresar"  onMouseOver="hacerBoton('{{return_url}}', $(this));"></div>
+<div id = "ventana">
+    <div class="TituloDerivado">{{ nombre }}</div>
+<div id = "banner">
+ <h1 align="center">Crucigrama</h1>
+</div>
+<div id = "datos">   
     <div id="crucigrama"></div>
     <div id="bienvenida">
         Nivel:<br>
@@ -229,6 +231,7 @@
     </div>
     <div id="finishScreen"><img src="/imagenes/felicidades.jpg"
 width="300" height="225"></div>
-
+</div>
+</div>
 </body>
 </html>

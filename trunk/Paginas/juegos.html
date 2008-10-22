@@ -21,26 +21,20 @@
     <body>
 
     <body>
-    <div id = "regresar"  onMouseOver="hacerBoton('{{return_url}}', $(this));">Regresar</div>
-    <div id = "ventana">
-        <div id = "banner">
-        Hello
-        </div>
-        Bienvenido {{ nombre }}
-        <div id = "datos">
+    <div id = "regresar"  onMouseOver="hacerBoton('{{return_url}}', $(this));"></div>
+  <div id = "ventana">
+        <div id = "banner"></div>
+        <span class="style6">Bienvenido {{ nombre }}        </span>
+    <div id = "datos">
             <div id = "botones" onMouseOver="hacerBoton('{{sudoku_url}}', $(this));">
-              Jugar sudoku
-            </div>
+              Jugar sudoku            </div>
             <div id = "botones" onMouseOver="hacerBoton('{{memorama_url}}', $(this));">
-                Jugar memorama
-            </div>
+                Jugar memorama            </div>
             <div id = "botones" onMouseOver="hacerBoton('{{crucigrama_url}}', $(this));">
-                Jugar crucigrama
-            </div>
+                Jugar crucigrama            </div>
         </div>
-        Todos los derechos reservados.
-        </div>
-        </p>
+        Todos los derechos reservados.        </div>
+    </p>
     </div>
     </body>
     </html>
