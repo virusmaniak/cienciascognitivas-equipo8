@@ -19,29 +19,23 @@ Los fonts seran grandes y extra grandes para su facil lectura del usuario, ya qu
  * Formato: subrayado
 
 === Botones ===
- * Color de los botones en su estado normal
- * Color de los botones presionados
- * Font de los botones, color de font, etc.
- * Forma de los botones
-
-=== Diseño del banner ===
- * Colores: claros, celestes.
- * Font: LOMELY
- * Imagenes: LOMELY
- * Tamaño del banner: 100px de altura por 150px
+ * Color azul claro con letras negras en bold en su estado no presionado.
+ * Color celeste con letras negras en bold en su estado presionado.
+ * El font sera bold de color negro.
+ * El diseño del boton tendra una forma rectangular.
 
 === Diseño de los recuadros de actividad ===
- * Marco: Negro 2px.
+ * Marco: Celeste 2px.
  * Posicion: Centrados en la pagina.
 
 === Diseño de las preguntas de memoria ===
- * Tamaño: 80px x 80px
+ * Tamaño: Variable a tamaño de la ventan.
  * Posicion: Centrados en la pagina.
  * Texto: Verdana
- * Tamano.Texto: 20px
+ * Tamano.Texto: 22px
 
 === Diseño de la barra de navegación ===
- * Tamano: 16px
+ * Tamano: 22px
  * Texto: Verdana
 
 (1) Construtips.com. (2005, Septiembre 3). Colors. Retrieved Octubre 10, 2008, from http://www.construtips.com/color.html
