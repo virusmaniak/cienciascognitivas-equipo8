@@ -14,14 +14,12 @@
 </head>
 <body>
     <body>
-        <div id = "regresar"  onMouseOver="hacerBoton('{{return_url}}', $(this));">Regresar</div>
+        <div id = "regresar"  onMouseOver="hacerBoton('{{return_url}}', $(this));"></div>
         <div id = "ventana">
-            <div id = "banner">
-                Datos de usuario
-            </div>
-            <div id = "datos">
+      <div id = "datos">
+                <p align="center">Datos del Usuario {{ usuario }}</p>
                 <p align="center">{{ mensaje }}</p>
-                <p><br>
+  <p><br>
                 </p>
                 <form method="post" name="form" action="{{ submit_url }}">
                     <div align="center">Nombre: 
