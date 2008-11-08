@@ -2,20 +2,21 @@
 /* CSS Document */
 
 .TituloDerivado {
-	font-size: x-large;
+	font-size: xx-large;
 	font-family: Helvetica, Verdana, Arial, sans-serif;
 }
 .Navegacion {font-size: medium; font-family: Arial, Helvetica, sans-serif; }
 .Banner {font-size: xx-large; font-family: Arial, Helvetica, sans-serif; }
 .TextoInfo {
-	font-size: 14px;
+	font-size: 18px;
 	font-family: Arial, Helvetica, sans-serif;
 }
-.subTitulos {font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; }
+.subTitulos {font-size: 18px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; }
 .TitulosDeInfo {font-family: Arial, Helvetica, sans-serif; font-size: large;}
 .style6 {font-size: medium; font-family: Arial, Helvetica, sans-serif; font-weight: bold; }
 #ventana {
     text-align: center;
+    font-size:16px;
 	background-color:#FFFFFF;
 	margin:auto;
 	margin-top:5%;
@@ -39,7 +40,7 @@
 	margin-left:10%;
 	height:100px;
 	background-color:#FFFFFF;
-
+    font-size:18px;
 }
 
 #regresar {
