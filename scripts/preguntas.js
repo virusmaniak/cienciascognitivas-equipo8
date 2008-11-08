@@ -1,5 +1,5 @@
 //DEFINICIONES
-var timeOut = 1000;
+var timeOut = 10000;
 
 
 var preguntasHechas = 0;
@@ -113,7 +113,7 @@ function recibirClickImagen(){
     }
     
     htmlResponse  = "<div id='responder" + preguntasHechas + "'>";
-    htmlResponse += caption + "<br><img src='/imagenes/'" + img1 +"m.jpg'>";
+    htmlResponse += caption + "<br><img src='/imagenes/" + img1 +"m.jpg'>";
     htmlResponse += "<img src='/imagenes/" + img2 + "m.jpg'>";
     htmlResponse += "<img src='/imagenes/" + img3 + "m.jpg'></div>";
     $("body").append(htmlResponse);
