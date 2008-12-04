@@ -1,5 +1,11 @@
 #summary Info sobre la estructura del programa.
 
+== Guia del Sistema ==
+  * Introducción a la estructura del sistema.
+  * Detalle de los módulos contenidos en el scripting del servidor.
+  * Scripts disponibles para el diseño de las páginas del programa.
+  * Direcciones HTML a las que las paginas deben llamar para que el sistema interprete las llamadas correctamente.
+
 == Introducción ==
 
 El programa está estructurado por módulos, cada uno con una función especifica. Por ejemplo el módulo del programa de memoria, contiene todo lo relacionado a desplegar las páginas que tienen que ver con la sección de ejercicios de memoria del programa. Cada módulo está representado en el código por un archivo .py. Los módulos contienen clases, donde cada clase es responsable de servir un tipo de página en el sitio, excepto en el módulo 'userModel.py', donde cada clase representa una tabla en la base de usuarios del programa.
@@ -21,7 +27,14 @@ Este módulo les da a los usuarios una serie de datos a memorizar, luego inicia 
 Este módulo tiene las clases que representan las tablas en la base de datos
 
 == Scripts ==
-Cada juego tiene sus propios scripts. La única excepción es el script 'preguntas.js' donde existe el script que va desplegado preguntas a los usuarios. Además del script 'jquery.js' que se usa como soporte para codificar.
+Cada juego tiene sus propios scripts. Existen 3 scripts diseñados para ser accesados desde los 3 juegos. Los scripts son:
+
+=== navegacion.js ===
+Este script contiene un método para convertir links en las páginas del sitio a botones con las imagenes de botones estandarizadas a lo largo del sitio y con comportamiento de botones al momento de interactuar con los botones. Se pide que se utilice este script para permitir una mayor estandarización y centralizar los puntos en los que se tendría que hacer un cambio si se quiere modificar el diseño de los botones.
+
+=== preguntas.js ===
+Este script es especial para los juegos del programa, y se utiliza cuando se entra a los juegos através del módulo de Memoria. Es importante que todos los juegos llamen a este Script de manera que el servidor pueda decidir si se van a mostrar las preguntas o no y de esta forma reutilizar el código de los juegos para los módulos de memoria y actividades de entretenimiento.
+
 
 == Direcciones HTML ==
 Dado a que el programa en python procesa todas las peticiones utilizando el sistema de módulos, las direcciones de los directorios del proyecto no son un match directo con las direcciones que el programa aparenta tener en el navegador. La estructura de los directorios desde HTML tiene la siguiente forma:
