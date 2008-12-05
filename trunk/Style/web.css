@@ -68,9 +68,15 @@
 	width:200px;
 	padding: 10px;
 	text-align: center;
-	
 }
 
+#botonesJuego {
+	background-image:url(../imagenes/boton2.png);
+    margin-left: 15%;
+	width: 70%;
+	margin-top: 10px;
+	font-size: 30px;
+}
 
 #datos {
 	margin-top:5%;

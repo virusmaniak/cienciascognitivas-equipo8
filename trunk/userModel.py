@@ -4,7 +4,6 @@
 import wsgiref.handlers
 
 from google.appengine.ext import db
-# TODO: Validar el formato de la base de datos, el registro de Actividad
 
 class registroDeUsuario(db.Model):
     #info del usuario:
@@ -13,11 +12,11 @@ class registroDeUsuario(db.Model):
     edad = db.StringProperty()
     #info del ultimo juego:
     tipoDePreguntas = db.IntegerProperty()
-    datos = db.StringProperty()
+    datos = db.TextProperty()
     img1 = db.IntegerProperty()
     img2 = db.IntegerProperty()
     img3 = db.IntegerProperty()
-    
+
 
 class registroDeActividad(db.Model):
     usuario = db.UserProperty()

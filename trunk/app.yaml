@@ -6,7 +6,7 @@ api_version: 1
 handlers:
 - url: /style
   static_dir: Style
-  
+
 - url: /imagenes
   static_dir: imagenes
 
@@ -18,10 +18,6 @@ handlers:
 
 - url: /memoria.*
   script: memoria.py
-  
-- url: /resultados
-  script: resultados.py
-  # TODO: Falta hacer la pagina de resultados
 
 - url: /.*
   script: main.py

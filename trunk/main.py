@@ -25,12 +25,14 @@ from google.appengine.ext import db
 from userModel import registroDeUsuario
 
 class MainHandler(webapp.RequestHandler):
-
+    """
+    Cargar y desplegar el boton de login.
+    """
     def get(self):
         if users.get_current_user():
             self.redirect('/menu')
             return
-            
+        
         template_values = {
             'login_url': users.create_login_url(self.request.uri)
         }
@@ -38,20 +40,23 @@ class MainHandler(webapp.RequestHandler):
         self.response.out.write(template.render(path, template_values))
 
 class MainMenu(webapp.RequestHandler):
+    """
+    Cargar y desplegar el menu principal
+    """
     def get(self):
         user = users.get_current_user()
         if not user:
             self.redirect('/')
             return
-        
+    
         if db.GqlQuery("SELECT * FROM registroDeUsuario WHERE usuario = :1", user).count() <= 0:
             registro = registroDeUsuario()
             registro.usuario = user
             registro.nombre = ''
             registro.put()
-        
+    
         registro = db.GqlQuery("SELECT * FROM registroDeUsuario WHERE usuario = :1", user).get()
-        
+    
         template_values = {
             'nombre': registro.nombre,
             'logout_url': users.create_logout_url(self.request.uri),
@@ -60,11 +65,15 @@ class MainMenu(webapp.RequestHandler):
             'marcador_url': '/resultados',
             'userInfo_url': '/usuario'
         }
-        
+    
         path = os.path.join(os.path.dirname(__file__), 'Paginas/main_menu.html')
         self.response.out.write(template.render(path, template_values))
 
 class UserInfo(webapp.RequestHandler):
+    """
+    Clase que despliega el html para modificar los datos del usuario
+    y que recibe los datos nuevos para guardarlos en la base de datos
+    """
     post = False
     def post(self):
         user = users.get_current_user()
@@ -77,15 +86,15 @@ class UserInfo(webapp.RequestHandler):
             'mensaje': 'Los cambios han sido realizados.',
             'redirect_url': '/menu'
         }
-        
+    
         path = os.path.join(os.path.dirname(__file__), 'Paginas/mensaje.html')
         self.response.out.write(template.render(path, template_values))
-    
+
     def get(self):
         if self.post:
             mensaje = 'Cambios realizados'
             self.post = False
-            
+        
         user = users.get_current_user()
         registro = db.GqlQuery("SELECT * FROM registroDeUsuario WHERE usuario = :1", user).get()
         template_values = {
@@ -93,10 +102,10 @@ class UserInfo(webapp.RequestHandler):
             'edad': registro.edad,
             'return_url': '/menu'
         }
-        
+    
         path = os.path.join(os.path.dirname(__file__), 'Paginas/userInfo.html')
         self.response.out.write(template.render(path, template_values))
-        
+    
 def main():
   application = webapp.WSGIApplication([('/', MainHandler), ('/menu', MainMenu),
                                     ('/usuario', UserInfo)], debug=True)
