@@ -34,16 +34,18 @@
     <script type="text/javascript" src="/scripts/navegacion.js"></script>
     <script type="text/javascript">
         var hacerPreguntas = {{ hacerPreguntas }};
-        var img1 = "square";
-        var img2 = "circle";
-        var img3 = "star";
-        var color1 = "red";
-        var color2 = "red";
-        var color3 = "blue";
-        var preguntasTotales = 3;
+        var img1 = {{ img1 }};
+        var img2 = {{ img2 }};
+        var img3 = {{ img3 }};
+		var preguntaDatos= {{ datos}};
+		var tipoDePreguntas= {{ tipoDePreguntas }};
     </script>
     <script type="text/javascript" src="/scripts/preguntas.js"></script>
     <script language="JavaScript" type="text/javascript">
+        /**
+        * Cargar el crucigrama de acuerdo a las variables requeridas por el
+        * Script de Crucigrama de "WebCrossword"
+        */
         var width;
         var height;
         var numAcross;
@@ -193,6 +195,38 @@
 
             $("#bienvenida").css("visibility", "hidden");
         }
+        
+        
+        function prepararBotonesDeMenu (menu){
+            // Darles comportamiento de boton a los datos,
+            // que cambien su imagen segun su estado respecto al mouse
+            menu.children().mousedown( function(){
+                $(this).css("background-image", "url(/imagenes/botonPressed.png)");
+            });
+            menu.children().mouseout( function(){
+                $(this).css("background-image", "url(/imagenes/boton2.png)");
+            });
+            menu.children().mouseover( function(){
+                $(this).css("background-image", "url(/imagenes/mouseOver.png)");
+            });
+
+            // Mandar llamar al metodo de procesar los clicks
+            menu.children().mouseup( recibirClickBotonesDeMenu );
+        }
+
+        function recibirClickBotonesDeMenu () {
+            if ($(this).html() == "Facil"){
+                cargarJuego(1);
+            }
+            if ($(this).html() == "Medio"){
+                cargarJuego(2);
+            }
+            if ($(this).html() == "Dificil"){
+                cargarJuego(3);
+            }
+        }
+
+        
         $(document).ready(function(){
             $("#crucigrama").css("visibility", "hidden");
             $("#finishScreen").css("visibility", "hidden");
@@ -202,15 +236,8 @@
             .css("border-style", "solid")
             .css("border-width", "1px");
 
-            $("#facil").click( function(){
-                cargarJuego(1);
-            } );
-            $("#medio").click( function(){
-                cargarJuego(2);
-            } );
-            $("#dificil").click( function(){
-                cargarJuego(3);
-            } );
+
+            prepararBotonesDeMenu ($("#bienvenida"));
         });
     </script>
     <script language="JavaScript" SRC="/scripts/crossword.js"></script>
@@ -226,9 +253,9 @@
         <div id="crucigrama"></div>
         <div id="bienvenida">
             Nivel:<br>
-            <input type="submit" id="facil" value="facil"></input><br>
-            <input type="submit" id="medio" value="medio"></input><br>
-            <input type="submit" id="dificil" value="dificil"></input><br>
+                <div id="botonesJuego">Facil</div>
+                <div id="botonesJuego">Medio</div>
+                <div id="botonesJuego">Dificil</div>
         </div>
         <div id="finishScreen"><img src="/imagenes/felicidades.jpg"
     width="300" height="225"></div>

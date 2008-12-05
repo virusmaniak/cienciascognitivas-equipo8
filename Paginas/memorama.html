@@ -14,9 +14,7 @@
         var img1 = {{ img1 }};
         var img2 = {{ img2 }};
         var img3 = {{ img3 }};
-		var preguntaDatos=[ ["Cristobal Colón descubrió América","Cristobal ______ descubrio America", "Colon", "alternativa1", "alternativa2"],
-		["El tec fue fundado por Eugenio Garza Sada","El ____ fue fundado por Eugenio Garza Sada", "tec", "alternativa1","alternativa2"] ];
-        var preguntasTotales = 3;
+		var preguntaDatos= {{ datos}};
 		var tipoDePreguntas= {{ tipoDePreguntas }};
     </script>
     <script type="text/javascript" src="/scripts/preguntas.js"></script>
@@ -40,9 +38,14 @@
     <div id="memorama"></div>
     <div id="bienvenida">
         Nivel:<br>
+        <!-- 
         <input type="submit" id="facil" value="facil"></input><br>
         <input type="submit" id="medio" value="medio"></input><br>
         <input type="submit" id="dificil" value="dificil"></input><br>
+    -->
+        <div id="botonesJuego">Facil</div>
+        <div id="botonesJuego">Medio</div>
+        <div id="botonesJuego">Dificil</div>
     </div>
     <div id="finishScreen"><img src="/imagenes/felicidades.jpg"
 width="300" height="225"></div>

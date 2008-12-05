@@ -9,16 +9,19 @@
     <script type="text/javascript" src="/scripts/navegacion.js"></script>
     <script type="text/javascript">
         var hacerPreguntas = {{ hacerPreguntas }};
-        var img1 = "square";
-        var img2 = "circle";
-        var img3 = "star";
-        var color1 = "red";
-        var color2 = "red";
-        var color3 = "blue";
-        var preguntasTotales = 3;
+        var img1 = {{ img1 }};
+        var img2 = {{ img2 }};
+        var img3 = {{ img3 }};
+		var preguntaDatos= {{ datos}};
+		var tipoDePreguntas= {{ tipoDePreguntas }};
     </script>
     <script type="text/javascript" src="/scripts/preguntas.js"></script>
 	<script src="/scripts/sudoku.js" language="javascript" type="text/javascript"></script>
+	<script type="text/javascript">
+	        if ( hacerPreguntas ){
+                startPreguntas();
+            }
+	</script>
     <style type="text/css">
 	<!--
 		@import url("../Style/web.css");
